@@ -1,0 +1,196 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 6 jun. 2022, 20:48:52
+    Author     : josea
+*/
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+.navbar{
+    height: 15vh;
+    width: 100%;
+    margin:auto;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(
+        90deg,
+        rgba(247, 247, 247, 1) 22%,
+        rgba(75, 111, 209, 1) 60%
+        );
+    padding-bottom:30px;
+    box-shadow: 1px 1px 5px #000;
+color: black;
+}
+
+.logo{
+    margin-top: 40px;
+    width: 160px;
+    cursor: pointer;
+}
+
+nav{
+    flex: 1;
+    padding-left:auto;
+    margin-left: 250px;
+    margin-top:auto;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0px 0px;
+   padding:0px;
+}
+
+
+.menu-horizontal{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.menu-horizontal > li > a{
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+.menu-horizontal > li:hover{
+    background-color: midnightblue;
+}
+.menu-vertical{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(0, 0, 0, .5);
+}
+.menu-horizontal li:hover .menu-vertical{
+    display: block;
+}
+.menu-vertical li:hover{
+    background-color: black;
+}
+
+.menu-vertical li a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 15px 15px 20px;
+}
+
+
+body {
+
+    -webkit-font-smoothing: antialiased;
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+    background: rgb(255, 255, 255);
+    overflow-x: hidden;
+    color: rgb(51, 51, 51);
+    font-family: "Open Sans", sans-serif, sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height:1.25rem;
+
+}
+h2{
+    top:120%;
+    height: 0px;
+    position:relative;
+    margin:50px;
+}
+.media-img{
+    object-fit: cover;
+    width: 100%;
+    height: 450px;
+
+}
+
+.relative{
+    top:0%;
+    left: auto;
+    padding-left: 0%;
+    padding-right: 0%;
+    position: relative;
+}
+
+
+
+div h2{
+    height: 50px;
+    width: 50px;
+    font-size: 1.50rem;
+    color: black;
+}
+/* Style the header */
+header {
+    background-color: #34495E ;
+    padding: 1px;
+    text-align: center;
+    font-size: 30px;
+    color:#D5D8DC;
+
+}
+h2{
+    text-align: center;
+    margin: 100px;
+
+}
+.absolute{
+    margin: 100px;
+    text-align: center;
+}
+
+
+article {
+    margin-top: -5%;
+    vertical-align:200px;
+    float: right;
+    top: 20em;
+    left: 20em;
+    padding:30px;
+    width: 50%;
+    background-color: white;
+    height: 250px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+
+
+
+/* Style the footer */
+footer {
+    background-color: #34495E;
+    padding: 7px;
+    text-align: right;
+    margin: 0px;
+    width: 500%;
+    height: 30px;
+   margin-top: 270px;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 350px) {
+    nav, article {
+        width: 80%;
+        height: auto;
+    }
+    .Logo-img{
+        overflow-x: hidden;
+        height: 30%;
+        position: absolute;
+        bottom: 30px;
+        right: 140px;
+        border: 1px solid aquamarine;
+    }
+    cont a{
+    color: black;
+}
+section ul{
+    padding: 0px;
+}
+}

@@ -1,0 +1,120 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 6 jun. 2022, 23:54:53
+    Author     : josea
+*/
+
+.content {
+    text-align: center;
+    text-decoration: none;
+    color: blue;
+}
+
+.conteiner h4{
+    text-decoration: none;
+    color: darkblue;
+}
+
+.cont h3{
+    text-decoration: none;
+    color: darkblue;
+}
+
+.feature-asus {
+    width: 600px;
+    height: 50%;
+    bottom: 50px;
+    right: 50px;
+    position: static;
+}
+
+.feature-dell{
+    width: 420px;
+    height: 50%;
+    position: static;
+    bottom: 50px;
+    right: 50px;
+}
+
+
+
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+.navbar{
+    height: 15vh;
+    width: 100%;
+    margin:auto;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(
+        90deg,
+        rgba(247, 247, 247, 1) 22%,
+        rgba(75, 111, 209, 1) 60%
+        );
+    padding-bottom:30px;
+    box-shadow: 1px 1px 5px #000;
+
+}
+
+.logo{
+    margin-top: 40px;
+    width: 160px;
+    cursor: pointer;
+}
+
+nav{
+    flex: 1;
+    padding-left: auto;
+    margin-left: 300px;
+    margin-top:auto;
+
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0px 20px;
+
+}
+a{
+    color: white;
+}
+
+.menu-horizontal{
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+}
+.menu-horizontal > li > a{
+	display: block;
+	padding: 15px 20px;
+	color: white;
+	text-decoration: none;
+}
+.menu-horizontal > li:hover{
+	background-color: midnightblue;
+}
+.menu-vertical{
+	position: absolute;
+	display: none;
+	list-style: none;
+	width: 200px;
+	background-color: rgba(0, 0, 0, .5);
+}
+.menu-horizontal li:hover .menu-vertical{
+	display: block;
+}
+.menu-vertical li:hover{
+	background-color: black;
+}
+
+.menu-vertical li a{
+	display: block;
+	color: white;
+	text-decoration: none;
+	padding: 15px 15px 15px 20px;
+}

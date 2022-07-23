@@ -1,0 +1,150 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 3 jun. 2022, 13:29:26
+    Author     : Usuario
+*/
+
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+.navbar{
+    height: 15vh;
+    width: 100%;
+    margin:auto;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(
+        90deg,
+        rgba(247, 247, 247, 1) 22%,
+        rgba(75, 111, 209, 1) 60%
+        );
+    padding-bottom:30px;
+    box-shadow: 1px 1px 5px #000;
+
+}
+
+.logo{
+    margin-top: 40px;
+    width: 160px;
+    cursor: pointer;
+}
+
+nav{
+    flex: 1;
+    padding-left: auto;
+    margin-left: 300px;
+    margin-top:auto;
+
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0px 20px;
+
+}
+a{
+    color: black;
+}
+
+.menu-horizontal{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.menu-horizontal > li > a{
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+.menu-horizontal > li:hover{
+    background-color: midnightblue;
+}
+.menu-vertical{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(0, 0, 0, .5);
+}
+.menu-horizontal li:hover .menu-vertical{
+    display: block;
+}
+.menu-vertical li:hover{
+    background-color: black;
+}
+
+.menu-vertical li a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 15px 15px 20px;
+}
+
+.banner{
+    width: 100%;
+    height: 600px;
+    animation: banner 10s infinite linear alternate;
+    background-size: 100% 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes banner{
+    0%, 20%{
+        background-image: url(../images/banner1.jpg);
+    }
+    25%, 45%{
+        background-image: url(../images/banner2.jpg);
+    }
+    50%, 70%{
+        background-image: url(../images/banner3.jpg);
+    }
+    75%, 100%{
+        background-image: url(../images/banner4.jpg);
+    }
+}
+
+.capa{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.6);    
+}
+
+.info{
+    z-index: 1;
+    width: 100%;
+    max-width: 550px;
+    text-align: center;
+}
+
+.info h1{
+    color: #fff;
+    font-size: 45px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.info p{
+    color: #c7c7c7;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.info a{
+    color: #fff;
+    text-decoration: none;
+    background: #3088e0;
+    padding: 16px 37px;
+    display: inline-block;
+    border-radius: 50px;
+}

@@ -8,9 +8,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 */
 
 .content {
-    text-align: center;
-    text-decoration: none;
-    color: blue;
+   margin-left: 100px;
 }
 
 .conteiner h4{
@@ -20,25 +18,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 
 .cont h3{
     text-decoration: none;
-    color: darkblue;
+    color: black;
 }
-
-.feature-asus {
-    width: 600px;
-    height: 50%;
-    bottom: 50px;
-    right: 50px;
-    position: static;
-}
-
-.feature-dell{
-    width: 420px;
-    height: 50%;
-    position: static;
-    bottom: 50px;
-    right: 50px;
-}
-
 
 
 *{
@@ -117,4 +98,48 @@ a{
 	color: white;
 	text-decoration: none;
 	padding: 15px 15px 15px 20px;
+}
+
+.cont{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    border: 2px solid black;
+    text-align: center;
+   
+}
+
+.feature-asus{
+    width: 250px;
+}
+.feature-dell{
+    width: 180px;
+    margin-top: 15px;
+}
+
+.conteiner{
+    margin-left: 100px;
+}
+.content h1{
+    
+    color: darkblue;
+}
+.conteiner h2{
+    text-align: center;
+    color: darkblue;
+}
+
+.container{
+    margin: 0px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 70%;
+}
+.feature-MSI{
+    width: 200px;
 }

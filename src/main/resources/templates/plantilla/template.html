@@ -47,7 +47,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             </div>
         </nav>
             </header>
-          </body>
+        i18n
+          </body> 
 
         <!-- ----------------------------- FOOTER ----------------------------- -->
 
@@ -96,6 +97,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <a class="text-white" href="#">STREAMTEG.com</a>
             </div>
             <!-- Copyright -->
+            <a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+               th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}">ES</a>
+            <a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+               th:href="${urlBuilder.replaceQueryParam('lang','en').toUriString()}">EN</a>
+            <!-- PARA TRADUCCION -->
+            
         </footer>
         
   

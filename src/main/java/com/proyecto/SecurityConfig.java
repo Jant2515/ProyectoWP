@@ -65,14 +65,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
     @Override
     protected void configure(HttpSecurity http) throws Exception {
        http.authorizeRequests()
-               .antMatchers("/home","login","home","/save")
+               .antMatchers("/home.html","login","home.html","/save")
                .hasRole("ADMIN")
                .antMatchers("/index", "/","/login")
                .hasAnyRole("USER", "VENDEDOR", "ADMIN")
                .anyRequest().authenticated()
                .and()
                .formLogin()
-               .loginPage("/login").permitAll().defaultSuccessUrl("/home",true);
+               .loginPage("/login").permitAll().defaultSuccessUrl("/home.html",true);
     }
     //El siguiente metodo funciona para realizar la autenticacion de accesos
     //i18n

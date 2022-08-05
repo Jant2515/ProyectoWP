@@ -21,41 +21,40 @@ import org.springframework.web.bind.annotation.PostMapping;
  */
 @Controller
 public class PersonaController {
-
+    
     @Autowired
     private IPersonaService personaService;
-
+    
     @GetMapping("/persona")
-    public String index(Model model) {
+    public String index (Model model){
         List<Persona> listaPersona = personaService.getAllPersona();
-        model.addAttribute("titulo", "Tabla Personas");
-        model.addAttribute("personas", listaPersona);
+        model.addAttribute("titulo","Tabla Personas");
+        model.addAttribute("personas",listaPersona);
         return "personas";
     }
-
+    
     @GetMapping("/personaN")
-    public String crearPersona(Model model) {
-        model.addAttribute("persona", new Persona());
+    public String crearPersona (Model model){
+        model.addAttribute("persona",new Persona());
         return "crear";
     }
-
+    
     @PostMapping("/save")
-    public String guardarPersona(@ModelAttribute Persona persona) {
+    public String guardarPersona (@ModelAttribute Persona persona){
         personaService.savePersona(persona);
         return "redirect:/persona";
     }
-
-    @GetMapping("/delete") //eliminar elemento
-    public String eliminarPersona(@PathVariable("id") Long idPersona) {
+    
+    @GetMapping("/editPersona/{id}")
+    public String editarPersona (@PathVariable("id")Long idPersona, Model model){
+        Persona persona = personaService.getPersonaById(idPersona);
+        model.addAttribute("persona",persona);
+        return "crear";
+    }
+    
+    @GetMapping("/delete/{id}") //eliminar elemento
+    public String eliminarPersona (@PathVariable("id") Long idPersona) {
         personaService.delete(idPersona);
         return "redirect:/persona";
-    }
-
-    @GetMapping("/editPersona/{id}")
-    public String editarPersona(@PathVariable("id") Long idPersona, Model model) {
-        Persona persona = personaService.getPersonaById(idPersona);
-        model.addAttribute("persona", persona);
-
-        return "crear";
     }
 }

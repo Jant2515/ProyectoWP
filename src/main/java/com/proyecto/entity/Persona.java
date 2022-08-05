@@ -12,6 +12,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -29,12 +31,11 @@ public class Persona implements Serializable {
     private String apellido2;
     private String telefono;
     private String email;
-
+    
     private String password;
     private int active;
     private String roles = "";
-    private String permisos = "";
-
+    private String permissions = "";
     public long getId() {
         return id;
     }
@@ -107,28 +108,25 @@ public class Persona implements Serializable {
         this.roles = roles;
     }
 
-    public String getPermisos() {
-        return permisos;
+    public String getPermissions() {
+        return permissions;
     }
 
-    public void setPermisos(String permisos) {
-        this.permisos = permisos;
+    public void setPermissions(String permissions) {
+        this.permissions = permissions;
     }
     
-      public List<String> getRoleList() {
-        if (this.roles.length() > 0) {
+    public List<String> getRoleList(){
+        if (this.roles.length() > 0){
             return Arrays.asList(this.roles.split(","));
         }
         return new ArrayList<>();
     }
     
-
-    public List<String> getPermisosList() {
-         if (this.permisos.length()>0){
-            return Arrays.asList(this.permisos.split(","));
+    public List<String> getPermissionList() {
+        if (this.permissions.length() > 0){
+            return Arrays.asList(this.permissions.split(","));
         }
         return new ArrayList<>();
     }
-
- 
 }

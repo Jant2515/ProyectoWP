@@ -36,7 +36,7 @@ public class PersonaController {
     @GetMapping("/personaN")
     public String crearPersona (Model model){
         model.addAttribute("persona",new Persona());
-        return "crear";
+        return "Registrar";
     }
     
     @PostMapping("/save")
@@ -49,7 +49,7 @@ public class PersonaController {
     public String editarPersona (@PathVariable("id")Long idPersona, Model model){
         Persona persona = personaService.getPersonaById(idPersona);
         model.addAttribute("persona",persona);
-        return "crear";
+        return "Registrar";
     }
     
     @GetMapping("/delete/{id}") //eliminar elemento

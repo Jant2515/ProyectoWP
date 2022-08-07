@@ -6,6 +6,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     Created on : 6 ago. 2022, 12:16:37
     Author     : Jeider Barber
 */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 .nav-links{
     position: relative;

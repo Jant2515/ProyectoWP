@@ -10,17 +10,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 *{
     font-family: 'Open Sans', sans-serif;
 }
+
 .navbar{
     height: 15vh;
     width: 100%;
     margin:auto;
     display: flex;
     align-items: center;
-    background: linear-gradient(
-        90deg,
-        rgba(247, 247, 247, 1) 22%,
-        rgba(75, 111, 209, 1) 60%
-        );
+    background: black;
     padding-bottom:30px;
     box-shadow: 1px 1px 5px #000;
 
@@ -32,13 +29,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     cursor: pointer;
 }
 
-nav{
-    flex: 1;
-    padding-left: auto;
-    margin-left: 300px;
-    margin-top:auto;
-
-}
 
 nav ul li{
     display: inline-block;
@@ -47,42 +37,42 @@ nav ul li{
 
 }
 a{
-    color: black;
+    color: white;
 }
 
 .menu-horizontal{
-	list-style: none;
-	display: flex;
-	justify-content: space-around;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
 }
 .menu-horizontal > li > a{
-	display: block;
-	padding: 15px 20px;
-	color: white;
-	text-decoration: none;
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
 }
 .menu-horizontal > li:hover{
-	background-color: midnightblue;
+    background-color: midnightblue;
 }
 .menu-vertical{
-	position: absolute;
-	display: none;
-	list-style: none;
-	width: 200px;
-	background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(0, 0, 0, .5);
 }
 .menu-horizontal li:hover .menu-vertical{
-	display: block;
+    display: block;
 }
 .menu-vertical li:hover{
-	background-color: black;
+    background-color: black;
 }
 
 .menu-vertical li a{
-	display: block;
-	color: white;
-	text-decoration: none;
-	padding: 15px 15px 15px 20px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 15px 15px 20px;
 }
 
 h1{
@@ -92,7 +82,7 @@ h1{
     margin-bottom: 15px;
     color: blue;
     margin: 80px;
-    
+
 }
 
 .feature-img{
@@ -111,7 +101,7 @@ ul li{
     display: inline-block;
     list-style: none;
     margin: 20px 20px;
-   
+
 }
 
 .static{
@@ -139,7 +129,7 @@ footer
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    
+
 }
 footer .container
 {
@@ -223,7 +213,7 @@ footer p
     text-decoration: none;
     margin-bottom: 10px;
     display: inline-block;
-    
+
 }
 .quickLinks ul li a:hover
 {
@@ -232,7 +222,7 @@ footer p
 .contact
 {
     width: calc(35% - 60px);
-    margin-right: 0 !important;    
+    margin-right: 0 !important;
 }
 .contact .info
 {

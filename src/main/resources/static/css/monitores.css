@@ -8,7 +8,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 */
 
 .content {
-   margin-left: 100px;
+    margin-left: 100px;
 }
 
 .conteiner h4{
@@ -31,11 +31,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     margin:auto;
     display: flex;
     align-items: center;
-    background: linear-gradient(
-        90deg,
-        rgba(247, 247, 247, 1) 22%,
-        rgba(75, 111, 209, 1) 60%
-        );
+    background: black;
     padding-bottom:30px;
     box-shadow: 1px 1px 5px #000;
 
@@ -47,13 +43,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     cursor: pointer;
 }
 
-nav{
-    flex: 1;
-    padding-left: auto;
-    margin-left: 300px;
-    margin-top:auto;
-
-}
 
 nav ul li{
     display: inline-block;
@@ -66,38 +55,38 @@ a{
 }
 
 .menu-horizontal{
-	list-style: none;
-	display: flex;
-	justify-content: space-around;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
 }
 .menu-horizontal > li > a{
-	display: block;
-	padding: 15px 20px;
-	color: white;
-	text-decoration: none;
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
 }
 .menu-horizontal > li:hover{
-	background-color: midnightblue;
+    background-color: midnightblue;
 }
 .menu-vertical{
-	position: absolute;
-	display: none;
-	list-style: none;
-	width: 200px;
-	background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(0, 0, 0, .5);
 }
 .menu-horizontal li:hover .menu-vertical{
-	display: block;
+    display: block;
 }
 .menu-vertical li:hover{
-	background-color: black;
+    background-color: black;
 }
 
 .menu-vertical li a{
-	display: block;
-	color: white;
-	text-decoration: none;
-	padding: 15px 15px 15px 20px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 15px 15px 20px;
 }
 
 .cont{
@@ -109,7 +98,7 @@ a{
     width: 300px;
     border: 2px solid black;
     text-align: center;
-   
+
 }
 
 .feature-asus{
@@ -124,7 +113,7 @@ a{
     margin-left: 100px;
 }
 .content h1{
-    
+
     color: darkblue;
 }
 .conteiner h2{
@@ -142,4 +131,16 @@ a{
 }
 .feature-MSI{
     width: 200px;
+}
+
+.nav-links{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: "Trebuchet MS", Helvetica,sans-serif;
+    letter-spacing: 3px;
+    padding: 10px 20px;
+    margin: 0 14px;
+    transition: color 0.3s ease-in-out;
 }

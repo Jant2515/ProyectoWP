@@ -8,12 +8,32 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
         <title>Categorias</title>
         <link rel="stylesheet" href="css/footer.css" type="text/css"/>
+        <link rel="stylesheet" href="css/categorias.css" type="text/css"/>
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     </head>
 
     <body>
+        <div class='navbar'>
+            <img src="images/logo.png" class='logo' alt="Es mi logo"/>
+            <nav>
+                <ul class="menu-horizontal">
+                    <li><a href="home.html" class="nav-links">Inicio</a></li>
+                    <li><a href="computadoras.html" class="nav-links">Computadoras</a></li>
+                    <li>
+                        <a href="#" class="nav-links" >Componentes</a>
+                        <ul class="menu-vertical">
+                            <li><a href="monitores.html" class="nav-links">Monitores</a></li>
+                            <li><a href="tarjetas.html" class="nav-links">Tarjetas Graficas</a></li>
+                            <li><a href="procesador.html" class="nav-links">Procesadores</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="nav-links">Login</a></li>
+                    <li><a href="ayuda.html" class="nav-links">Ayuda</a></li>
+                </ul>
+            </nav>
+        </div>
         <!-- NAVBAR <header th:replace="plantilla/template::header"></header> -->
 
         <div class="row row-cols-1 row-cols-md-3 g-4">

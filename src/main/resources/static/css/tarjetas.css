@@ -9,20 +9,28 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 *{
     font-family: 'Open Sans', sans-serif;
 }
+.nav-links{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: "Trebuchet MS", Helvetica,sans-serif;
+    letter-spacing: 3px;
+    padding: 10px 20px;
+    margin: 0 14px;
+    transition: color 0.3s ease-in-out;
+    
+}
 .navbar{
     height: 15vh;
-    width: 100%;
+    width: 98%;
     margin:auto;
     display: flex;
     align-items: center;
-    background: linear-gradient(
-        90deg,
-        rgba(247, 247, 247, 1) 22%,
-        rgba(75, 111, 209, 1) 60%
-        );
+    background: black;
     padding-bottom:30px;
     box-shadow: 1px 1px 5px #000;
-color: black;
+    margin-top: 0.5%; 
 }
 
 .logo{
@@ -31,18 +39,12 @@ color: black;
     cursor: pointer;
 }
 
-nav{
-    flex: 1;
-    padding-left:auto;
-    margin-left: 250px;
-    margin-top:auto;
-}
 
 nav ul li{
     display: inline-block;
     list-style: none;
-    margin: 0px 0px;
-   padding:0px;
+    margin: 0px 20px;
+
 }
 
 
@@ -80,8 +82,6 @@ nav ul li{
     text-decoration: none;
     padding: 15px 15px 15px 20px;
 }
-
-
 body {
 
     -webkit-font-smoothing: antialiased;
@@ -95,9 +95,8 @@ body {
     font-size: 1rem;
     font-weight: 300;
     line-height:1.25rem;
-
 }
-h2{
+h1{
     top:120%;
     height: 0px;
     position:relative;
@@ -135,7 +134,7 @@ header {
     color:#D5D8DC;
 
 }
-h2{
+h1{
     text-align: center;
     margin: 100px;
 

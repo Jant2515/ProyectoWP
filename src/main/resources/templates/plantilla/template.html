@@ -33,7 +33,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Categor&iacute;as
-                            </a>
+                 
+                                <li sec:authorize="hasAnyRole('ROLE_USER')"class="nav-item">                                                                
+                            <a class="nav-link"href="#" th:href="@{~/user/index}">USER</a>
+                        </li>
+                        
+                           <li sec:authorize="has Role('ROLE_ADMIN','ROLE_MANAGER')"class="nav-item">                                                                
+                            <a class="nav-link"href="#" th:href="@{~/management/index}">ADMIN</a>
+                        </li>
+              </a>
+                            
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="categorias.html">Categoi&iacute;</a></li>
                                 <li><a class="dropdown-item" href="computadoras.html">Computadoras</a></li>

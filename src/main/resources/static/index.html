@@ -29,6 +29,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <li><a target="_blank" href="NuevosProductos.html">Nuevos Productos</a></li>
             <li><a target="_blank" href="personas.html">Personas</a></li>
             <li><a target="_blank" href="RegistroPersonas.html">Registro</a></li>
+            <li sec:authorize="hasAnyRole('ROLE_USER')"class="nav-item">                                                                
+                            <a class="nav-link"href="#" th:href="@{~/user/index}">USER</a>
+                        </li>
+                      
+                           <li sec:authorize="has Role('ROLE_ADMIN','ROLE_MANAGER')"class="nav-item">                                                                
+                            <a class="nav-link"href="#" th:href="@{~/management/index}">ADMIN</a>
+                        </li>
         </ul>
         <footer>
             <div class="container">

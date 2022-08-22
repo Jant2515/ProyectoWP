@@ -17,18 +17,25 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <img src="images/logo.png" class='logo' alt="Es mi logo"/>
             <nav>
                 <ul class="menu-horizontal">
-                    <li><a href="home.html" class="nav-links">Inicio</a></li>
-                    <li><a href="computadoras.html" class="nav-links">Computadoras</a></li>
+                    <li><a th:href="@{/home}" class="nav-links"
+                           th:text="#{categoria.inicio2}">Inicio</a></li>
+                    <li><a th:href="@{/computadoras}" class="nav-links"
+                           th:text="#{categoria.computadoras}">Computadoras</a></li>
                     <li>
-                        <a href="#" class="nav-links" >Componentes</a>
+                        <a href="#" class="nav-links" 
+                           th:text="#{categoria.componentes}">Componentes</a>
                         <ul class="menu-vertical">
-                            <li><a href="monitores.html" class="nav-links">Monitores</a></li>
-                            <li><a href="tarjetas.html" class="nav-links">Tarjetas Graficas</a></li>
-                            <li><a href="procesador.html" class="nav-links">Procesadores</a></li>
+                            <li><a th:href="@{/monitores}" class="nav-links"
+                                   th:text="#{categoria.monitores}">Monitores</a></li>
+                            <li><a th:href="@{/tarjetas}" class="nav-links"
+                                   th:text="#{categoria.tarjetas}">Tarjetas Graficas</a></li>
+                            <li><a href="procesador.html" class="nav-links"
+                                   th:text="#{categoria.procesadores}">Procesadores</a></li>
                         </ul>
                     </li>
                     <li><a href="#" class="nav-links">Login</a></li>
-                    <li><a href="ayuda.html" class="nav-links">Ayuda</a></li>
+                    <li><a th:href="@{/ayuda}" class="nav-links"
+                           th:text="#{categoria.ayuda}">Ayuda</a></li>
                 </ul>
             </nav>
         </div>
@@ -40,12 +47,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <!-- Este es el content DIV -->
             <div class="content">
                 <!-- br es para hacer salto de linea -->
-                <h1>Computadoras</h1>
-                <h3>Lo mejor en computadoras en todo el pais.</h3>
-                <p>En este apartado podra consultar por la disponibilidad de
+                <h1 th:text="#{titulo.compu}">Computadoras</h1>
+                <h3 th:text="#{titulo.compu2}">Lo mejor en computadoras en todo el pais.</h3>
+                <p th:text="#{info.compu}">En este apartado podra consultar por la disponibilidad de
                     las mejores computadoras y sus respectivos componentes con
                     los mejores precios de todo el mercado.<br></p>
-                <h3>En STREAMTEG tenemos en disponibilidad distintos tipo de computadoras:<br></h3>
+                <h3 th:text="#{titulo.compu3}">En STREAMTEG tenemos en disponibilidad distintos tipo de computadoras:<br></h3>
                 <ul>
                     <li>Laptops</li>
                     <li>Laptops gaming</li>
@@ -54,7 +61,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <li>PC de escritorio(sin armar)</li>
                     <li>PC gaming(sin armar)</li>
                 </ul>
-                <h2>Imagenes de los productos disponibles</h2>
+                <h2 th:text="#{titulo.compu4}">Imagenes de los productos disponibles</h2>
             </div>
             <div class="container">
                 <div class="flex-container">

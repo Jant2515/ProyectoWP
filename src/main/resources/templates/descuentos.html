@@ -17,18 +17,25 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <img src="images/logo.png" class='logo' alt="Es mi logo"/>
             <nav>
                 <ul class="menu-horizontal">
-                    <li><a href="home.html" class="nav-links">Inicio</a></li>
-                    <li><a href="computadoras.html" class="nav-links">Computadoras</a></li>
+                    <li><a th:href="@{/home}" class="nav-links"
+                           th:text="#{categoria.inicio2}">Inicio</a></li>
+                    <li><a th:href="@{/computadoras}" class="nav-links"
+                           th:text="#{categoria.computadoras}">Computadoras</a></li>
                     <li>
-                        <a href="#" class="nav-links" >Componentes</a>
+                        <a href="#" class="nav-links" 
+                           th:text="#{categoria.componentes}">Componentes</a>
                         <ul class="menu-vertical">
-                            <li><a href="monitores.html" class="nav-links">Monitores</a></li>
-                            <li><a href="tarjetas.html" class="nav-links">Tarjetas Graficas</a></li>
-                            <li><a href="procesador.html" class="nav-links">Procesadores</a></li>
+                            <li><a th:href="@{/monitores}" class="nav-links"
+                                   th:text="#{categoria.monitores}">Monitores</a></li>
+                            <li><a th:href="@{/tarjetas}" class="nav-links"
+                                   th:text="#{categoria.tarjetas}">Tarjetas Graficas</a></li>
+                            <li><a href="procesador.html" class="nav-links"
+                                   th:text="#{categoria.procesadores}">Procesadores</a></li>
                         </ul>
                     </li>
                     <li><a href="#" class="nav-links">Login</a></li>
-                    <li><a href="ayuda.html" class="nav-links">Ayuda</a></li>
+                    <li><a th:href="@{/ayuda}" class="nav-links"
+                           th:text="#{categoria.ayuda}">Ayuda</a></li>
                 </ul>
             </nav>
         </div>
@@ -41,10 +48,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <img src="images/pcgamer1.jpg" class="card-img-top" alt="pcgamer1" height="250" width="150">
                     <div class="card-body">
                         <h5 class="card-title">PC GAMER RGB</h5>
-                        <p class="card-text"><br>
+                        <p class="card-text" th:text="#{info.desc}"><br>
                             Precio: $999.999</p>
                         <div class="d-grid gap-2 col-6 mx-auto">
-                            <a href="#" class="btn btn-outline-danger" >Descuento del 25%</a> 
+                            <a href="#" class="btn btn-outline-danger" 
+                               th:text="#{info.desc2}">Descuento del 25%</a> 
                         </div>
                     </div>
                     <span></span>
@@ -56,10 +64,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <img src="images/tarje2.png" class="card-img-top" alt="tarjeta2" height="250" width="150">
                     <div class="card-body">
                         <h5 class="card-title">PNY GeForce RTX 2080 Ti</h5>
-                        <p class="card-text"><br>
+                        <p class="card-text" th:text="#{info.desc}"><br>
                         Precio: $999.999</p>
                         <div class="d-grid gap-2 col-6 mx-auto">
-                            <a href="#" class="btn btn-outline-danger" >Descuento del 15%</a> 
+                            <a href="#" class="btn btn-outline-danger" 
+                               th:text="#{info.desc3}">Descuento del 15%</a> 
                         </div>                    
                     </div>
                     <span></span>
@@ -70,10 +79,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <img src="images/laptoplenovo.jpg" class="card-img-top" alt="laptoplenovo" height="250" width="150">
                     <div class="card-body">
                         <h5 class="card-title">LAPTOP LENOVO</h5>
-                        <p class="card-text"><br>
+                        <p class="card-text" th:text="#{info.desc}"><br>
                         Precio: $999.999</p>
                         <div class="d-grid gap-2 col-6 mx-auto">
-                            <a href="#" class="btn btn-outline-danger" >Descuento del 35%</a> 
+                            <a href="#" class="btn btn-outline-danger"
+                               th:text="#{info.desc4}">Descuento del 35%</a> 
                         </div>
                     </div>
                     <span></span>
@@ -85,10 +95,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <img src="images/dellm.jpeg" class="card-img-top" alt="dellm" height="250" width="150">
                     <div class="card-body">
                         <h5 class="card-title">Monitor Dell</h5>
-                        <p class="card-text"><br>
+                        <p class="card-text" th:text="#{info.desc}"><br>
                         Precio: $999.999</p>
                         <div class="d-grid gap-2 col-6 mx-auto">
-                            <a href="#" class="btn btn-outline-danger" >Descuento del 15%</a> 
+                            <a href="#" class="btn btn-outline-danger" 
+                               th:text="#{info.desc3}">Descuento del 15%</a> 
                         </div>
                     </div>
                     <span></span>

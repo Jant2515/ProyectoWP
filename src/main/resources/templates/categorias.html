@@ -19,18 +19,25 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <img src="images/logo.png" class='logo' alt="Es mi logo"/>
             <nav>
                 <ul class="menu-horizontal">
-                    <li><a href="home.html" class="nav-links">Inicio</a></li>
-                    <li><a href="computadoras.html" class="nav-links">Computadoras</a></li>
+                    <li><a th:href="@{/home}" class="nav-links"
+                           th:text="#{categoria.inicio2}">Inicio</a></li>
+                    <li><a th:href="@{/computadoras}" class="nav-links"
+                           th:text="#{categoria.computadoras}">Computadoras</a></li>
                     <li>
-                        <a href="#" class="nav-links" >Componentes</a>
+                        <a href="#" class="nav-links" 
+                           th:text="#{categoria.componentes}">Componentes</a>
                         <ul class="menu-vertical">
-                            <li><a href="monitores.html" class="nav-links">Monitores</a></li>
-                            <li><a href="tarjetas.html" class="nav-links">Tarjetas Graficas</a></li>
-                            <li><a href="procesador.html" class="nav-links">Procesadores</a></li>
+                            <li><a th:href="@{/monitores}" class="nav-links"
+                                   th:text="#{categoria.monitores}">Monitores</a></li>
+                            <li><a th:href="@{/tarjetas}" class="nav-links"
+                                   th:text="#{categoria.tarjetas}">Tarjetas Graficas</a></li>
+                            <li><a href="procesador.html" class="nav-links"
+                                   th:text="#{categoria.procesadores}">Procesadores</a></li>
                         </ul>
                     </li>
                     <li><a href="#" class="nav-links">Login</a></li>
-                    <li><a href="ayuda.html" class="nav-links">Ayuda</a></li>
+                    <li><a th:href="@{/ayuda}" class="nav-links"
+                           th:text="#{categoria.ayuda}">Ayuda</a></li>
                 </ul>
             </nav>
         </div>
@@ -41,10 +48,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <div class="card">
                     <img src="images/monitor.jpg" class="card-img-top" alt="monitor">
                     <div class="card-body">
-                        <h5 class="card-title">MONITORES</h5>
-                        <p class="card-text">Este componente muestra la informaci&oacute;n de tu equipo como im&aacute;genes y textos.</p>
+                        <h5 class="card-title"
+                           th:text="#{titulo.categm}" >MONITORES</h5>
+                        <p class="card-text"
+                           th:text="#{info.categm}">Este componente muestra la informaci&oacute;n de tu equipo como im&aacute;genes y textos.</p>
                         <div class="d-grid gap-2 col-6 mx-auto">
-                            <a href="monitores.html" class="btn btn-primary">Ver m&aacute;s</a>
+                            <a th:href="@{/monitores}" class="btn btn-primary"
+                               th:text="#{boton.categ}">Ver m&aacute;s</a>
                         </div>
                     </div>
                 </div>
@@ -53,10 +63,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <div class="card">
                     <img src="images/computadora.jpg" class="card-img-top" alt="computadora">
                     <div class="card-body">
-                        <h5 class="card-title">COMPUTADORAS</h5>
-                        <p class="card-text">Dispositivo inform&aacute;tico capaz de recibir, almacenar y procesar informaci&oacute;n.</p>
+                        <h5 class="card-title"
+                            th:text="#{titulo.categc}">COMPUTADORAS</h5>
+                        <p class="card-text"
+                           th:text="#{info.categc}">Dispositivo inform&aacute;tico capaz de recibir, almacenar y procesar informaci&oacute;n.</p>
                         <div class="d-grid gap-2 col-6 mx-auto">
-                            <a href="computadoras.html" class="btn btn-primary">Ver m&aacute;s</a>
+                            <a th:href="@{/computadoras}" class="btn btn-primary"
+                               th:text="#{boton.categ}">Ver m&aacute;s</a>
                         </div>                    
                     </div>
                 </div>
@@ -65,10 +78,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <div class="card">
                     <img src="images/procesador.jpg" class="card-img-top" alt="procesador.jpg">
                     <div class="card-body">
-                        <h5 class="card-title">PROCESADORES</h5>
-                        <p class="card-text">Este componente procesa todo lo que ocurre en la PC y ejecuta todas las acciones que existen.</p>
+                        <h5 class="card-title"
+                            th:text="#{titulo.categp}">PROCESADORES</h5>
+                        <p class="card-text"
+                           th:text="#{info.categp}">Este componente procesa todo lo que ocurre en la PC y ejecuta todas las acciones que existen.</p>
                         <div class="d-grid gap-2 col-6 mx-auto">
-                            <a href="procesador.html" class="btn btn-primary">Ver m&aacute;s</a>
+                            <a href="procesador.html" class="btn btn-primary"
+                               th:text="#{boton.categ}">Ver m&aacute;s</a> <!-- ARREGLAR PROCESADORES -->
                         </div>                    
                     </div>
                 </div>
@@ -77,10 +93,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <div class="card">
                     <img src="images/tarjetaG.jpg" class="card-img-top" alt="tarjetaG">
                     <div class="card-body">
-                        <h5 class="card-title">TARJETAS GRAFICAS</h5>
-                        <p class="card-text">Este componente transforma los datos que env&iacute;a el procesador.</p>
+                        <h5 class="card-title"
+                            th:text="#{titulo.categt}">TARJETAS GRAFICAS</h5>
+                        <p class="card-text"
+                           th:text="#{info.categt}">Este componente transforma los datos que env&iacute;a el procesador.</p>
                         <div class="d-grid gap-2 col-6 mx-auto">
-                            <a href="tarjetas.html" class="btn btn-primary">Ver m&aacute;s</a>
+                            <a th:href="@{/tarjetas}" class="btn btn-primary"
+                               th:text="#{boton.categ}">Ver m&aacute;s</a>
                         </div>                    
                     </div>
                 </div>

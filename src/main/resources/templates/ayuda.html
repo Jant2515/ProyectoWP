@@ -3,42 +3,65 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
+
 <html>
     <head>
-        <title>Inicio</title>
+        <link rel="stylesheet" href="css/ayuda.css"/>
         <link rel="stylesheet" href="css/footer.css" type="text/css"/>
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/home.css"/>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ayuda</title>
     </head>
     <body>
+        
         <div class='navbar'>
+            <img src="images/logo.png" class='logo' alt="Es mi logo"/>
             <nav>
-                <ul class="nav-list">
-                    <li> <a href="home.html" class="nav-links"
-                            th:text="#{categoria.inicio}">INICIO</a></li>  <!-- SEMANA 9 WEB -->
-                    <li> <a href="descuentos.html" class="nav-links">DESCUENTOS</a></li>
-                    <li> <a href="categorias.html" class="nav-links">CATEGORIAS</a></li>
-                    <li> <a href="personaN" class="nav-links">SIGN IN</a></li>
-                    <li> <a href="login" class="nav-links">LOG IN</a></li>
+                <ul class="menu-horizontal">
+                    <li><a th:href="@{/home}" class="nav-links"
+                           th:text="#{categoria.inicio2}">Inicio</a></li>
+                    <li><a th:href="@{/computadoras}" class="nav-links"
+                           th:text="#{categoria.computadoras}">Computadoras</a></li>
+                    <li>
+                        <a href="#" class="nav-links" 
+                           th:text="#{categoria.componentes}">Componentes</a>
+                        <ul class="menu-vertical">
+                            <li><a th:href="@{/monitores}" class="nav-links"
+                                   th:text="#{categoria.monitores}">Monitores</a></li>
+                            <li><a th:href="@{/tarjetas}" class="nav-links"
+                                   th:text="#{categoria.tarjetas}">Tarjetas Graficas</a></li>
+                            <li><a href="procesador.html" class="nav-links"
+                                   th:text="#{categoria.procesadores}">Procesadores</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="nav-links">Login</a></li>
+                    <li><a th:href="@{/ayuda}" class="nav-links"
+                           th:text="#{categoria.ayuda}">Ayuda</a></li>
                 </ul>
             </nav>
         </div>
-        <div class="banner">
-            <div class="capa"></div>
-            <div class="info">
-                <h1>BIENVENIDOS A STREAMTEG</h1> <!-- SEMANA 9 WEB -->
-                <p>En esta p&aacute;gina puedes encontrar los mejores componentes para
-                tu pc con la mejor calidad y precio de todo el pa&iacute;s.</p>
-                <a href="computadoras.html">Ver mas</a>
-                
+        
+        <div>
+            <h1 th:text="#{titulo.ayuda}"> Cu&eacute;ntanos c&oacute;mo podemos ayudarte </h1>
+            <div class="static">
+                <h2 th:text="#{info.ayuda}">Buscar</h2>
             </div>
+            <div>
+                
+                <ul>
+                    <li><a href="#">Ayuda con su cuenta</a></li>
+                    <li><a href="#">Ayuda con los pagos</a></li>
+                    <li><a href="mailto:streamteg01@gmail.com">Cont&aacute;ctate con nosotros</a></li>
+                    <li><a href="#">Cont&aacute;ctate con nosotros</a></li>
+                    <li><a href="#">Opciones de pago</a></li>
+                    <li><a href="#">Fallo en el pedido</a></li>
+                </ul>
+
+            </div>
+
         </div>
-        <br>
-        <br>
+        
     </body>
-    <!-- <footer>
+    <footer>
             <div class="container">
                 <div class="sec aboutus">
                     <h2>About Us</h2>
@@ -87,5 +110,5 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </footer>
         <div class="copyrightText">
             <p>Copyright © 2022 STREAMTEG. All Right Reserved.</p>
-        </div>-->
+        </div>
 </html>

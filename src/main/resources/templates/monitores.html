@@ -16,51 +16,58 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <img src="images/logo.png" class='logo' alt="Es mi logo"/>
             <nav>
                 <ul class="menu-horizontal">
-                    <li><a href="home.html" class="nav-links">Inicio</a></li>
-                    <li><a href="computadoras.html" class="nav-links">Computadoras</a></li>
+                    <li><a th:href="@{/home}" class="nav-links"
+                           th:text="#{categoria.inicio2}">Inicio</a></li>
+                    <li><a th:href="@{/computadoras}" class="nav-links"
+                           th:text="#{categoria.computadoras}">Computadoras</a></li>
                     <li>
-                        <a href="#" class="nav-links" >Componentes</a>
+                        <a href="#" class="nav-links" 
+                           th:text="#{categoria.componentes}">Componentes</a>
                         <ul class="menu-vertical">
-                            <li><a href="monitores.html" class="nav-links">Monitores</a></li>
-                            <li><a href="tarjetas.html" class="nav-links">Tarjetas Graficas</a></li>
-                            <li><a href="procesador.html" class="nav-links">Procesadores</a></li>
+                            <li><a th:href="@{/monitores}" class="nav-links"
+                                   th:text="#{categoria.monitores}">Monitores</a></li>
+                            <li><a th:href="@{/tarjetas}" class="nav-links"
+                                   th:text="#{categoria.tarjetas}">Tarjetas Graficas</a></li>
+                            <li><a href="procesador.html" class="nav-links"
+                                   th:text="#{categoria.procesadores}">Procesadores</a></li>
                         </ul>
                     </li>
                     <li><a href="#" class="nav-links">Login</a></li>
-                    <li><a href="ayuda.html" class="nav-links">Ayuda</a></li>
+                    <li><a th:href="@{/ayuda}" class="nav-links"
+                           th:text="#{categoria.ayuda}">Ayuda</a></li>
                 </ul>
             </nav>
         </div>
 
         <div>
             <div class="content">
-                <h1> Monitores</h1>
+                <h1 th:text="#{titulo.monit}"> Monitores</h1>
 
-                <p> <br> Los monitores de pc, los cuales pueden ser llamados pantalla, monitor de ordenador
+                <p th:text="#{info.monit}"> <br> Los monitores de pc, los cuales pueden ser llamados pantalla, monitor de ordenador
                     y monitor de computadora, es el principal dispositivo de salida (interfaz), que muestra
                     datos o informaci&oacuten a todos los usuarios.
 
-                <p> <br>Estos tambi&eacuten se pueden considerar como un perif&eacuterico de entreda/salida
+                <p th:text="#{info.monit2}"> <br>Estos tambi&eacuten se pueden considerar como un perif&eacuterico de entreda/salida
                     si el monitor cuenta con pantalla t&aacutectil o multit&aacutectil.
 
-                <p> <br>Es por esto que en STREAMTEG antes te visualizar cuales monitores podr&aacuten adquirir, conozcan 
+                <p th:text="#{info.monit3}"> <br>Es por esto que en STREAMTEG antes te visualizar cuales monitores podr&aacuten adquirir, conozcan 
                     las principales caracter&iacutesticas que pueden tener estos mismos.
 
             </div>
 
             <div class="conteiner">
-                <h4><br>Caracter&iacutesticas principales de un monitor de pc a tomar en cuenta:</h4>
+                <h4 th:text="#{titulo.monit2}"><br>Caracter&iacutesticas principales de un monitor de pc a tomar en cuenta:</h4>
 
                 <ul>
-                    <li>Tama&ntildeo de pantalla</li>
-                    <li>Resoluci&oacuten de pantalla</li>
-                    <li>&Aacutengulo de visi&oacuten</li>
-                    <li>Entradas de video</li>
-                    <li>Tipo de panel</li>
-                    <li>Tama&ntildeo de pixel</li>
-                    <li>Profundidad de color</li>
+                    <li th:text="#{info.monit4}">Tama&ntildeo de pantalla</li>
+                    <li th:text="#{info.monit5}">Resoluci&oacuten de pantalla</li>
+                    <li th:text="#{info.monit6}">&Aacutengulo de visi&oacuten</li>
+                    <li th:text="#{info.monit7}">Entradas de video</li>
+                    <li th:text="#{info.monit8}">Tipo de panel</li>
+                    <li th:text="#{info.monit9}">Tama&ntildeo de pixel</li>
+                    <li th:text="#{info.monit10}">Profundidad de color</li>
                 </ul>
-                <h2><br>Monitores que STREAMTEG te ofrece</h2>
+                <h2 th:text="#{titulo.monit3}"><br>Monitores que STREAMTEG te ofrece</h2>
             </div>
             <div class="container">
                 <div class="cont">

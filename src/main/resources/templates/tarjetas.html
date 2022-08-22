@@ -23,48 +23,61 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <img src="images/logo.png" class='logo' alt="Es mi logo"/>
             <nav>
                 <ul class="menu-horizontal">
-                    <li><a href="home.html" class="nav-links">Inicio</a></li>
-                    <li><a href="computadoras.html" class="nav-links">Computadoras</a></li>
+                    <li><a th:href="@{/home}" class="nav-links"
+                           th:text="#{categoria.inicio2}">Inicio</a></li>
+                    <li><a th:href="@{/computadoras}" class="nav-links"
+                           th:text="#{categoria.computadoras}">Computadoras</a></li>
                     <li>
-                        <a href="#" class="nav-links" >Componentes</a>
+                        <a href="#" class="nav-links" 
+                           th:text="#{categoria.componentes}">Componentes</a>
                         <ul class="menu-vertical">
-                            <li><a href="monitores.html" class="nav-links">Monitores</a></li>
-                            <li><a href="tarjetas.html" class="nav-links">Tarjetas Graficas</a></li>
-                            <li><a href="procesador.html" class="nav-links">Procesadores</a></li>
+                            <li><a th:href="@{/monitores}" class="nav-links"
+                                   th:text="#{categoria.monitores}">Monitores</a></li>
+                            <li><a th:href="@{/tarjetas}" class="nav-links"
+                                   th:text="#{categoria.tarjetas}">Tarjetas Graficas</a></li>
+                            <li><a href="procesador.html" class="nav-links"
+                                   th:text="#{categoria.procesadores}">Procesadores</a></li>
                         </ul>
                     </li>
                     <li><a href="#" class="nav-links">Login</a></li>
-                    <li><a href="ayuda.html" class="nav-links">Ayuda</a></li>
+                    <li><a th:href="@{/ayuda}" class="nav-links"
+                           th:text="#{categoria.ayuda}">Ayuda</a></li>
                 </ul>
             </nav>
         </div>
 
-        <h1 style="text-align:center;">Tarjetas Graficas</h1>  
+        <h1 style="text-align:center;"
+            th:text="#{titulo.tarjetas}">Tarjetas Graficas</h1>  
         <img src="images/targe.jpg" class="media-img" alt="tarjeta de fondo"/>
 
         <div class="relative">    
-            <div class="absolute"> <p style="text-align:center;">En ninguna otra tienda encontraras mejores precios y un catalogo tan extenso de tarjetas graficas como en PcComponentes. Las tarjetas graficas son un componente indispensable para jugones y profesionales del diseño y la edicion de imagen y video. </p>
-                <p>Utiliza nuestro sistema de filtros para definir especificaciones como la marca o cantidad de memoria RAM y te mostraremos las tarjetas graficas Nvidia y AMD que se ajusten a tus indicaciones.</p>
+            <div class="absolute"> <p style="text-align:center;"
+                th:text="#{info.tarjetas}">En ninguna otra tienda encontraras mejores precios y un catalogo tan extenso de tarjetas graficas como en PcComponentes. Las tarjetas graficas son un componente indispensable para jugones y profesionales del diseño y la edicion de imagen y video. </p>
+                <p th:text="#{info.tarjetas2}">Utiliza nuestro sistema de filtros para definir especificaciones como la marca o cantidad de memoria RAM y te mostraremos las tarjetas graficas Nvidia y AMD que se ajusten a tus indicaciones.</p>
             </div></div>
 
 
         <header>
-            <h3 style="text-align:center;">Categorias</h3>       
+            <h3 style="text-align:center;"
+                th:text="#{titulo.tarjetas2}">Categorias</h3>       
         </header>
         <section class="barra">
 
             <section class="cont">  
                 <ul>
-                    <li><a href="nvidia.html">NVIDIA</a></li> 
-                    <li><a href="amd.html">AMD</a></li>
+                    <li><a th:href="@{/nvidia}">NVIDIA</a></li> 
+                    <li><a th:href="@{/amd}">AMD</a></li> 
                 </ul>
 
             </section> 
 
             <article>
-                <h1 style="text-align:center;">-Lo mejor del mercado esta en tu manos-</h1>
-                <p style="text-align:center;">-NVIDIA Corporation es una empresa multinacional especializada en el desarrollo de unidades de procesamiento grafico y tecnologias de circuitos integrados para estaciones de trabajo, ordenadores personales y dispositivos moviles.</p>
-                <p style="text-align:center;">-AMD(Advanced Micro Devices),es una compañia estadounidense de semiconductores con sede en Santa Clara, California, que desarrolla procesadores de computacion y productos tecnologicos similares de consumo.</p>
+                <h1 style="text-align:center;"
+                    th:text="#{titulo.tarjetas3}">-Lo mejor del mercado esta en tu manos-</h1>
+                <p style="text-align:center;"
+                   th:text="#{info.tarjetas3}">-NVIDIA Corporation es una empresa multinacional especializada en el desarrollo de unidades de procesamiento grafico y tecnologias de circuitos integrados para estaciones de trabajo, ordenadores personales y dispositivos moviles.</p>
+                <p style="text-align:center;"
+                   th:text="#{info.tarjetas4}">-AMD(Advanced Micro Devices),es una compañia estadounidense de semiconductores con sede en Santa Clara, California, que desarrolla procesadores de computacion y productos tecnologicos similares de consumo.</p>
             </article>
         </section>
         <br>

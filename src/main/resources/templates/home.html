@@ -3,58 +3,44 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
-
 <html>
     <head>
-        <link rel="stylesheet" href="css/ayuda.css"/>
+        <title>Inicio</title>
         <link rel="stylesheet" href="css/footer.css" type="text/css"/>
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-        <title>Ayuda</title>
+        <link rel="stylesheet" href="css/home.css"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        
         <div class='navbar'>
-            <img src="images/logo.png" class='logo' alt="Es mi logo"/>
             <nav>
-                <ul class="menu-horizontal">
-                    <li><a href="home.html" class="nav-links">Inicio</a></li>
-                    <li><a href="computadoras.html" class="nav-links">Computadoras</a></li>
-                    <li>
-                        <a href="#" class="nav-links" >Componentes</a>
-                        <ul class="menu-vertical">
-                            <li><a href="monitores.html" class="nav-links">Monitores</a></li>
-                            <li><a href="tarjetas.html" class="nav-links">Tarjetas Graficas</a></li>
-                            <li><a href="procesador.html" class="nav-links">Procesadores</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#" class="nav-links">Login</a></li>
-                    <li><a href="ayuda.html" class="nav-links">Ayuda</a></li>
+                <ul class="nav-list">
+                    <li> <a th:href="@{/home}" class="nav-links"
+                            th:text="#{categoria.inicio}">INICIO</a></li>  <!-- SEMANA 9 WEB -->
+                    <li> <a th:href="@{/descuentos}" class="nav-links"
+                            th:text="#{categoria.descuento}">DESCUENTOS</a></li>
+                    <li> <a th:href="@{/categorias}" class="nav-links"
+                            th:text="#{categoria.categorias}">CATEGORIAS</a></li>
+                    <li> <a href="personaN" class="nav-links">SIGN IN</a></li>
+                    <li> <a href="login" class="nav-links">LOG IN</a></li>
                 </ul>
             </nav>
         </div>
-        
-        <div>
-            <h1> Cu&eacute;ntanos c&oacute;mo podemos ayudarte </h1>
-            <div class="static">
-                <h2>Buscar</h2>
-            </div>
-            <div>
+        <div class="banner">
+            <div class="capa"></div>
+            <div class="info">
+                <h1 th:text="#{titulo.home}"></h1> <!-- SEMANA 9 WEB -->
+                <p th:text="#{info.home}">En esta p&aacute;gina puedes encontrar los mejores componentes para
+                tu pc con la mejor calidad y precio de todo el pa&iacute;s.</p>
+                <a th:href="@{/computadoras}" th:text="#{boton.home}">Ver mas</a>
                 
-                <ul>
-                    <li><a href="#">Ayuda con su cuenta</a></li>
-                    <li><a href="#">Ayuda con los pagos</a></li>
-                    <li><a href="mailto:streamteg01@gmail.com">Cont&aacute;ctate con nosotros</a></li>
-                    <li><a href="#">Cont&aacute;ctate con nosotros</a></li>
-                    <li><a href="#">Opciones de pago</a></li>
-                    <li><a href="#">Fallo en el pedido</a></li>
-                </ul>
-
             </div>
-
         </div>
-        
+        <br>
+        <br>
     </body>
-    <footer>
+    <!-- <footer>
             <div class="container">
                 <div class="sec aboutus">
                     <h2>About Us</h2>
@@ -103,5 +89,5 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </footer>
         <div class="copyrightText">
             <p>Copyright © 2022 STREAMTEG. All Right Reserved.</p>
-        </div>
+        </div>-->
 </html>

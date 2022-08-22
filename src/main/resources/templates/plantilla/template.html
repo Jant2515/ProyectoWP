@@ -12,107 +12,102 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     </head>
     <body>
-         <header th:frangment="header">
-        <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="images/logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
-                    StreamTEG
-                </a>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="ayuda.html">Ayuda</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="descuentos.html">Descuentos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="login_1.html">LogIn</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Categor&iacute;as
-                 
-                                <li sec:authorize="hasAnyRole('ROLE_USER')"class="nav-item">                                                                
-                            <a class="nav-link"href="#" th:href="@{~/user/index}">USER</a>
-                        </li>
-                        
-                           <li sec:authorize="has Role('ROLE_ADMIN','ROLE_MANAGER')"class="nav-item">                                                                
-                            <a class="nav-link"href="#" th:href="@{~/management/index}">ADMIN</a>
-                        </li>
-              </a>
-                            
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="categorias.html">Categoi&iacute;</a></li>
-                                <li><a class="dropdown-item" href="computadoras.html">Computadoras</a></li>
-                                <li><a class="dropdown-item" href="tarjetas.html">Tarjetas Graficas</a></li>
-                                <li><a class="dropdown-item" href="procesador.html">Procesadores</a></li>
-                                <li><a class="dropdown-item" href="monitores.html">Monitores</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+        <header th:frangment="header">
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="images/logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                        StreamTEG
+                    </a>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="ayuda.html">Ayuda</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="descuentos.html">Descuentos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="login_1.html">LogIn</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Categor&iacute;as
+
+                                    <li sec:authorize="hasAnyRole('ROLE_USER')"class="nav-item">                                                                
+                                        <a class="nav-link"href="#" th:href="@{~/user/index}">USER</a>
+                                    </li>
+
+                                    <li sec:authorize="has Role('ROLE_ADMIN','ROLE_MANAGER')"class="nav-item">                                                                
+                                        <a class="nav-link"href="#" th:href="@{~/management/index}">ADMIN</a>
+                                    </li>
+                                </a>
+
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="categorias.html">Categoi&iacute;</a></li>
+                                    <li><a class="dropdown-item" href="computadoras.html">Computadoras</a></li>
+                                    <li><a class="dropdown-item" href="tarjetas.html">Tarjetas Graficas</a></li>
+                                    <li><a class="dropdown-item" href="procesador.html">Procesadores</a></li>
+                                    <li><a class="dropdown-item" href="monitores.html">Monitores</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
-            </header>
+            </nav>
+        </header>
         i18n
-          </body> 
+    </body> 
 
-        <!-- ----------------------------- FOOTER ----------------------------- -->
+    <!-- ----------------------------- FOOTER ----------------------------- -->
 
-        <footer class="bg-blue text-center text-white">
-            <!-- Grid container -->
-            <div class="container p-4 pb-0">
-                <!-- Section: Social media -->
-                <section class="mb-4">
-                    <!-- Facebook -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-                       ><i class="fab fa-facebook-f"></i
-                        ></a>
+    <footer th:fragment="footer"  class="bg-blue text-center text-white">
+        <div class="container">
+            <div class="sec aboutus">
+                <h2>About Us</h2>
+                <p>Esta pagina fue creada con la intencion de
+                    brindar a las personas usuarias componentes 
+                    electronicos de la mejor calidad y un buen 
+                    precio.</p>
+                <ul class="sci">
+                    <li><a href="https://www.facebook.com/StreamTeg-104088852409000"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="https://twitter.com/StreamTeg"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.instagram.com/streamteg01/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 
-                    <!-- Twitter -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-                       ><i class="fab fa-twitter"></i
-                        ></a>
-
-                    <!-- Google -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-                       ><i class="fab fa-google"></i
-                        ></a>
-
-                    <!-- Instagram -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-                       ><i class="fab fa-instagram"></i
-                        ></a>
-
-                    <!-- Linkedin -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-                       ><i class="fab fa-linkedin-in"></i
-                        ></a>
-
-                    <!-- Github -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-                       ><i class="fab fa-github"></i
-                        ></a>
-                </section>
-                <!-- Section: Social media -->
+                </ul>
             </div>
-            <!-- Grid container -->
-
-            <!-- Copyright -->
-            <div class="text-center p-3" style="background-color: #1845ad;">
-                © 2022 Copyright:
-                <a class="text-white" href="#">STREAMTEG.com</a>
+            <div class="sec quickLinks">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="url">About</a></li>
+                    <li><a href="url">FAQ</a></li>
+                    <li><a href="url">Privacy Policy</a></li>
+                    <li><a href="ayuda.html">Ayuda</a></li>
+                    <li><a href="TerminosyCondiciones.html">Terminos y Condiciones</a></li>
+                    <li><a href="url">Contact</a></li>
+                </ul>
             </div>
-            <!-- Copyright -->
-            <a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
-               th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}">ES</a>
-            <a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
-               th:href="${urlBuilder.replaceQueryParam('lang','en').toUriString()}">EN</a>
-            <!-- PARA TRADUCCION -->
-            
-        </footer>
-        
-  
+            <div class="sec contact">
+                <h2>Contact Info</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                        <span>Calle Flores, <br>
+                            Santo Domingo, Heredia <br> Costa Rica</span>
+                    </li>
+                    <li>
+                        <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+                        <p><a href="tel:+50612344321">+506 1234 4321</a><br>
+                            <a href="tel:+50612344321">+506 1234 4321</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                        <p><a href="mailto:streamteg01@gmail.com">streamteg01@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
 </html>

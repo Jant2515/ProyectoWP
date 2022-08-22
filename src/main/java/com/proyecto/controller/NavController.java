@@ -48,8 +48,8 @@ public class NavController {
     
     //@GetMapping("/procesador") //ESTA DANDO ERROR NO ACEPTA /PROCESADOR
     //public String index7 (Model model){
-      //  return "procesador";
-    //}
+     //   return "procesador";
+//}
     
     @GetMapping("/ayuda")
     public String index8 (Model model){

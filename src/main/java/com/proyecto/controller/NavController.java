@@ -148,6 +148,11 @@ public class NavController {
     public String index10(Model model) {
         return "categorias";
     }
+    
+    @GetMapping("/ubicacion")
+    public String index11(Model model) {
+        return "ubicacion";
+    }
 
     private final Logger log = LoggerFactory.getLogger(NavController.class);
 

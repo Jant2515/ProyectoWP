@@ -25,7 +25,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     border-radius: 0px 0px 20px 20px;
 }
 
-img{
+.imge{
     width: 90px;
     border-radius: 50%;
 }
@@ -45,7 +45,7 @@ img{
     cursor:pointer;
 }
 
-a{
+.apo{
   text-decoration: none;   
   font-size:20px;
   color: white;
@@ -53,7 +53,7 @@ a{
   display: block;
 }
 
-a:hover{
+.apo:hover{
     background: rgb(44,44,44);
     border-radius: 40px 40px 40px 40px;
     
@@ -108,29 +108,29 @@ a:hover{
     <body>
 <header class="encabezado">  
     <nav>  
-        <div><img src="images/logo.png" alt="logo" ></div>
+        <div><img class="imge" src="images/logo.png" alt="logo" ></div>
             <ul> 
-              <li><a th:href="@{/home}">Inicio</a></li>
+              <li><a class="apo" th:href="@{/home}">Inicio</a></li>
               <li>
-                  <a th:href="@{/categorias}">Productos</a>
+                  <a class="apo" th:href="@{/categorias}">Productos</a>
                   <ul>
-                  <li><a th:href="@{/descuentos}">Descuentos</a></li>
-                  <li><a th:href="@{/computadoras}">Computadoras</a></li>
-                  <li><a th:href="@{/procesador}">Procesadores</a></li>
-                  <li><a th:href="@{/monitores}">Monitores</a></li>
+                  <li><a class="apo" th:href="@{/descuentos}">Descuentos</a></li>
+                  <li><a class="apo" th:href="@{/computadoras}">Computadoras</a></li>
+                  <li><a class="apo" th:href="@{/procesadores}">Procesadores</a></li>
+                  <li><a class="apo" th:href="@{/monitores}">Monitores</a></li>
                   <li>
-                      <a href="Graficas">Graficas</a>
+                      <a class="apo" href="Graficas">Graficas</a>
                   <ul>
-                            <li><a href="AMD">AMD</a></li>
-                            <li><a href="NVIDIA">NVIDIA</a></li>    
+                            <li><a class="apo" th:href="@{/amd}">AMD</a></li>
+                            <li><a class="apo" th:href="@{/nvidia}">NVIDIA</a></li>    
                 </ul>     
             
         </li>
        </ul> 
-        <li><a href="personaN">Sing in</a> </li>
-        <li><a href="#">Ubicacion</a></li>
+        <li><a class="apo" href="personaN">Sing in</a> </li>
+        <li><a class="apo" href="#">Ubicacion</a></li>
         <br>
-        <a th:href="@{/getCart}"><i class="fa fa-shopping-cart" style="font-size:30px"></i></a>
+        <a class="apo" th:href="@{/getCart}"><i class="fa fa-shopping-cart" style="font-size:30px"></i></a>
      </nav> 
         </header>
          </header>

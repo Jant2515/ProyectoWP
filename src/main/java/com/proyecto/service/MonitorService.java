@@ -7,6 +7,7 @@ package com.proyecto.service;
 import com.proyecto.entity.Monitor;
 import com.proyecto.repository.MonitorRepository;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,6 +24,11 @@ public class MonitorService implements IMonitorService{
     @Override
     public List<Monitor> getAllMonitor() {
         return (List<Monitor>)monitorRepository.findAll();
+    }
+    
+    @Override
+    public Optional<Monitor> get(Long id) {
+        return monitorRepository.findById(id);
     }
 
     @Override

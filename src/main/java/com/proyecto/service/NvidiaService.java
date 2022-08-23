@@ -9,6 +9,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.proyecto.repository.NvidiaRepository;
+import java.util.Optional;
 
 /**
  *
@@ -25,6 +26,11 @@ public class NvidiaService implements INvidiaService{
         return (List<Nvidia>)nvidiaRepository.findAll();
     }
 
+    @Override
+    public Optional<Nvidia> get(Long id) {
+        return nvidiaRepository.findById(id);
+    }
+    
     @Override
     public Nvidia getNvidiaById(long id) {
         return nvidiaRepository.findById(id).orElse(null);

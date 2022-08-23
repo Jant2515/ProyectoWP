@@ -12,6 +12,7 @@ import com.proyecto.entity.Nvidia;
 import com.proyecto.entity.Orden;
 import com.proyecto.entity.Persona;
 import com.proyecto.entity.Procesador;
+import com.proyecto.entity.Producto;
 import com.proyecto.service.IAmdService;
 import com.proyecto.service.IComputadoraService;
 import com.proyecto.service.IDetalleOrdenService;
@@ -20,6 +21,7 @@ import com.proyecto.service.INvidiaService;
 import com.proyecto.service.IOrdenService;
 import com.proyecto.service.IPersonaService;
 import com.proyecto.service.IProcesadorService;
+import com.proyecto.service.IProductoService;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -43,6 +45,10 @@ public class NavController {
 
     @Autowired
     private IPersonaService personaService;
+    
+    @Autowired
+    private IProductoService productoService;
+    
 
     @Autowired
     private IOrdenService ordenService;
@@ -172,64 +178,70 @@ public class NavController {
     @GetMapping("/productovista3/{id}")
     public String productoVista3(@PathVariable Long id, Model model) {
         log.info("Id producto que fue enviado parametro {}", id);
-        Computadora computadora = new Computadora();
-        Optional<Computadora> computadoraOptional = computadoraService.get(id);
-        computadora = computadoraOptional.get();
+        Amd amd = new Amd();
+        Optional<Amd> amdOptional = amdService.get(id);
+        amd = amdOptional.get();
 
-        model.addAttribute("computadora", computadora);
+        model.addAttribute("amd", amd);
 
-        return "productovista";
+        return "productovista3";
     }
     
     @GetMapping("/productovista4/{id}")
     public String productoVista4(@PathVariable Long id, Model model) {
         log.info("Id producto que fue enviado parametro {}", id);
-        Computadora computadora = new Computadora();
-        Optional<Computadora> computadoraOptional = computadoraService.get(id);
-        computadora = computadoraOptional.get();
+        Nvidia nvidia = new Nvidia();
+        Optional<Nvidia> nvidiaOptional = nvidiaService.get(id);
+        nvidia = nvidiaOptional.get();
 
-        model.addAttribute("computadora", computadora);
+        model.addAttribute("nvidia", nvidia);
 
-        return "productovista";
+        return "productovista4";
     }
     
     @GetMapping("/productovista5/{id}")
     public String productoVista5(@PathVariable Long id, Model model) {
         log.info("Id producto que fue enviado parametro {}", id);
-        Computadora computadora = new Computadora();
-        Optional<Computadora> computadoraOptional = computadoraService.get(id);
-        computadora = computadoraOptional.get();
+        Monitor monitor = new Monitor();
+        Optional<Monitor> monitorOptional = monitorService.get(id);
+        monitor = monitorOptional.get();
 
-        model.addAttribute("computadora", computadora);
+        model.addAttribute("monitor", monitor);
 
-        return "productovista";
+        return "productovista5";
     }
 
     @PostMapping("/cart")
     public String addCart(@RequestParam Long id, @RequestParam Integer cantidad, Model model) {
         DetalleOrden detalleOrden = new DetalleOrden();
+        Producto producto = new Producto();
         Computadora computadora = new Computadora();
         Procesador procesador = new Procesador();
+        Amd amd = new Amd();
+        Nvidia nvidia = new Nvidia();
+        Monitor monitor = new Monitor();
+        
+        
         double sumaTotal = 0;
 
-        Optional<Computadora> optionalProducto = computadoraService.get(id);
+        Optional<Producto> optionalProducto = productoService.get(id);
         log.info("Producto añadido: {}", optionalProducto.get());
         log.info("Cantidad: {}", cantidad);
-        computadora = optionalProducto.get();
+        producto = optionalProducto.get();
         
         
 
         detalleOrden.setCantidad(cantidad);
-        detalleOrden.setPrecio(computadora.getPrecio());
-        detalleOrden.setNombre(computadora.getNombre());
-        detalleOrden.setTotal(computadora.getPrecio() * cantidad);
-        detalleOrden.setComputadora(computadora);
+        detalleOrden.setPrecio(producto.getPrecio());
+        detalleOrden.setNombre(producto.getNombre());
+        detalleOrden.setTotal(producto.getPrecio() * cantidad);
+        detalleOrden.setProducto(producto);
         
         
 
         //validar que le producto no se añada 2 veces
-        Long idcomputadora = computadora.getId();
-        boolean ingresado = detalles.stream().anyMatch(p -> p.getComputadora().getId() == idcomputadora);
+        Long idproducto = producto.getId();
+        boolean ingresado = detalles.stream().anyMatch(p -> p.getProducto().getId() == idproducto);
         
        
         

@@ -4,7 +4,7 @@
  */
 package com.proyecto.service;
 
-import com.proyecto.entity.Amd;
+import com.proyecto.entity.Producto;
 import java.util.List;
 import java.util.Optional;
 
@@ -12,10 +12,10 @@ import java.util.Optional;
  *
  * @author josea
  */
-public interface IAmdService {
-    public List<Amd> getAllAmd();
-    public Optional<Amd> get(Long id);
-    public Amd getAmdById (long id);
-    public void saveAmd(Amd amd);
+public interface IProductoService {
+    public List<Producto> getAllProducto();
+    public Optional<Producto> get(Long id);
+    public Producto getProductoById (long id);
+    public void saveProducto(Producto producto);
     public void delete (long id);
 }

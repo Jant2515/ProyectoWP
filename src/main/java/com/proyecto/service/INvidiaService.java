@@ -6,6 +6,7 @@ package com.proyecto.service;
 
 import com.proyecto.entity.Nvidia;
 import java.util.List;
+import java.util.Optional;
 
 /**
  *
@@ -13,6 +14,7 @@ import java.util.List;
  */
 public interface INvidiaService {
     public List<Nvidia> getAllNvidia();
+    public Optional<Nvidia> get(Long id);
     public Nvidia getNvidiaById (long id);
     public void saveNvidia(Nvidia nvidia);
     public void delete (long id);

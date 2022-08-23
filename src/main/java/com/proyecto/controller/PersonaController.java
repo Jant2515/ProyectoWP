@@ -42,7 +42,7 @@ public class PersonaController {
     @PostMapping("/save")
     public String guardarPersona (@ModelAttribute Persona persona){
         personaService.savePersona(persona);
-        return "redirect:/persona";
+        return "redirect:/home";
     }
     
     @GetMapping("/editPersona/{id}")

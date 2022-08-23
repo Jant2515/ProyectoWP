@@ -26,6 +26,9 @@ public class DetalleOrden {
     private double cantidad;
     private double precio;
     private double total;
+    
+    @ManyToOne
+    private  Producto producto;
 
     @ManyToOne
     private Orden orden;
@@ -145,6 +148,16 @@ public class DetalleOrden {
     public void setMonitor(Monitor monitor) {
         this.monitor = monitor;
     }
+
+    public Producto getProducto() {
+        return producto;
+    }
+
+    public void setProducto(Producto producto) {
+        this.producto = producto;
+    }
+    
+    
 
     @Override
     public String toString() {

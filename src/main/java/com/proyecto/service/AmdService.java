@@ -7,6 +7,7 @@ package com.proyecto.service;
 import com.proyecto.entity.Amd;
 import com.proyecto.repository.AmdRepository;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,6 +24,11 @@ public class AmdService implements IAmdService{
     @Override
     public List<Amd> getAllAmd() {
         return (List<Amd>)amdRepository.findAll();
+    }
+    
+    @Override
+    public Optional<Amd> get(Long id) {
+        return amdRepository.findById(id);
     }
 
     @Override

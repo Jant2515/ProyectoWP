@@ -266,7 +266,7 @@ public class NavController {
         List<DetalleOrden> ordenesNueva = new ArrayList<DetalleOrden>();
 
         for (DetalleOrden detalleOrden : detalles) {
-            if (detalleOrden.getComputadora().getId() != id) {
+            if (detalleOrden.getProducto().getId() != id) {
                 ordenesNueva.add(detalleOrden);
             }
         }

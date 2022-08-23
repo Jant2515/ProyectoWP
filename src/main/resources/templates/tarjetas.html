@@ -4,9 +4,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to c
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
 <html>
-
-
     <head>
+        
         <title>Tarjetas Graficas</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,33 +17,24 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     </head>
 
     <body>
-
-        <div class='navbar'>
-            <img src="images/logo.png" class='logo' alt="Es mi logo"/>
-            <nav>
-                <ul class="menu-horizontal">
-                    <li><a th:href="@{/home}" class="nav-links"
-                           th:text="#{categoria.inicio2}">Inicio</a></li>
-                    <li><a th:href="@{/computadoras}" class="nav-links"
-                           th:text="#{categoria.computadoras}">Computadoras</a></li>
-                    <li>
-                        <a href="#" class="nav-links" 
-                           th:text="#{categoria.componentes}">Componentes</a>
-                        <ul class="menu-vertical">
-                            <li><a th:href="@{/monitores}" class="nav-links"
-                                   th:text="#{categoria.monitores}">Monitores</a></li>
-                            <li><a th:href="@{/tarjetas}" class="nav-links"
-                                   th:text="#{categoria.tarjetas}">Tarjetas Graficas</a></li>
-                            <li><a href="@{/procesadores}" class="nav-links"
-                                   th:text="#{categoria.procesadores}">Procesadores</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#" class="nav-links">Login</a></li>
-                    <li><a th:href="@{/ayuda}" class="nav-links"
-                           th:text="#{categoria.ayuda}">Ayuda</a></li>
-                </ul>
-            </nav>
-        </div>
+        <style>
+  .bte{
+    text-align: center;
+  align-content: center;
+  padding: 0.5em 1.5em;
+  font-size: 1 em;
+  cursor: pointer;
+  text-decoration: white;
+  color: white;
+  background-color: gray;
+  border: none;
+  border-radius: 40px 40px 40px 40px;
+}
+        </style>
+        
+        
+ <header th:replace="plantilla/template::header"></header>
+       
 
         <h1 style="text-align:center;"
             th:text="#{titulo.tarjetas}">Tarjetas Graficas</h1>  
@@ -55,22 +45,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 th:text="#{info.tarjetas}">En ninguna otra tienda encontraras mejores precios y un catalogo tan extenso de tarjetas graficas como en PcComponentes. Las tarjetas graficas son un componente indispensable para jugones y profesionales del diseño y la edicion de imagen y video. </p>
                 <p th:text="#{info.tarjetas2}">Utiliza nuestro sistema de filtros para definir especificaciones como la marca o cantidad de memoria RAM y te mostraremos las tarjetas graficas Nvidia y AMD que se ajusten a tus indicaciones.</p>
             </div></div>
-
-
         <header>
-            <h3 style="text-align:center;"
+            <h3 style="text-align:center;" class="jj"
                 th:text="#{titulo.tarjetas2}">Categorias</h3>       
         </header>
         <section class="barra">
-
-            <section class="cont">  
-                <ul>
-                    <li><a th:href="@{/nvidia}">NVIDIA</a></li> 
-                    <li><a th:href="@{/amd}">AMD</a></li> 
-                </ul>
-
-            </section> 
-
             <article>
                 <h1 style="text-align:center;"
                     th:text="#{titulo.tarjetas3}">-Lo mejor del mercado esta en tu manos-</h1>
@@ -81,6 +60,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             </article>
         </section>
         <br>
+                    <section class="cont">  
+                <ul>
+                   <button class="bte"> <a th:href="@{/nvidia}">NVIDIA</a></button>
+                     <button class="bte"> <a th:href="@{/amd}">AMD</a></button>
+                </ul>
+
+            </section> 
         <br>
     </body>
     <footer th:replace="plantilla/template::footer" ></footer>

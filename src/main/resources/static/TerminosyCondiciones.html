@@ -9,7 +9,129 @@
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
+    <header th:frangment="header">
+             <style>  
+*{
+    margin:0;
+    padding:0;
+}
 
+.encabezado{
+    background: #080710;;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.imge{
+    width: 90px;
+    border-radius: 50%;
+}
+
+.encabezado nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+.encabezado nav ul{
+    z-index: 2;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    cursor:pointer;
+}
+
+.apo{
+  text-decoration: none;   
+  font-size:20px;
+  color: white;
+  padding:15px 20px;
+  display: block;
+}
+
+.apo:hover{
+    background: rgb(44,44,44);
+    border-radius: 40px 40px 40px 40px;
+    
+}
+
+.encabezado nav ul li ul{
+   display:flex;
+   flex-direction: column;
+}
+
+.encabezado nav ul li ul {
+    position: absolute;
+    background: #080710;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.encabezado nav ul li ul li{
+    width: 180px;
+    position:relative;
+    
+}
+
+.encabezado nav ul li ul li ul{
+    top:0;
+    left:180px;
+    position:absolute;
+    border-radius: 0px 20px 20px 20px;
+    
+}
+
+.encabezado nav ul li ul{
+   display: none;
+    
+}
+
+.encabezado nav ul li:hover>ul{
+    display: block;
+}
+
+.fa-shopping-cart{
+    width: 30px;
+    color: white;
+}
+
+</style>
+    <head>
+      <meta charset="UTF-8">  
+      <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      </head>
+    <body>
+<header class="encabezado">  
+    <nav>  
+        <div><img class="imge" src="images/logo.png" alt="logo" ></div>
+            <ul> 
+              <li><a class="apo" th:href="@{/home}">Inicio</a></li>
+              <li>
+                  <a class="apo" th:href="@{/categorias}">Productos</a>
+                  <ul>
+                  <li><a class="apo" th:href="@{/descuentos}">Descuentos</a></li>
+                  <li><a class="apo" th:href="@{/computadoras}">Computadoras</a></li>
+                  <li><a class="apo" th:href="@{/procesadores}">Procesadores</a></li>
+                  <li><a class="apo" th:href="@{/monitores}">Monitores</a></li>
+                  <li>
+                      <a class="apo" th:href="@{/tarjetas}">Graficas</a>
+                  <ul>
+                            <li><a class="apo" th:href="@{/amd}">AMD</a></li>
+                            <li><a class="apo" th:href="@{/nvidia}">NVIDIA</a></li>    
+                </ul>     
+            
+        </li>
+       </ul> 
+        <li><a class="apo" href="personaN">Sing in</a> </li>
+        <li><a class="apo" href="#">Ubicacion</a></li>
+        <br>
+        <a class="apo" th:href="@{/getCart}"><i class="fa fa-shopping-cart" style="font-size:30px"></i></a>
+     </nav> 
+    </header>
+        </header>
+   <br>
+   <br>
   <p align="center">
   TÉRMINOS, CONDICIONES Y POLÍTICAS DE LA GARANTÍA
 TÉRMINOS DE USO

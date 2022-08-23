@@ -17,7 +17,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <link th:href="@{/css/heroic-features.css}" rel="stylesheet">
     </head>
     <body>
-
+ <header th:replace="plantilla/template::header"></header>
         <!-- Page Content -->
         <div class="container">
             <!-- Page Heading/Breadcrumbs -->
@@ -77,11 +77,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
                         <div class="col-lg-3">
                             <h2 class="card-title">Resumen Orden</h2>
-                            <form action="https://formsubmit.co/vicjcc1@gmail.com" method="POST">
-                                <input type="submit" />
                             <ul class="list-group">
                                 <li class="list-group-item"><h5 th:text="'Total: ₡' + ${orden.total}"> </h5></li>
-                                <a href="#" class="btn btn-dark" type="submit">Generar Factura</a>
+                                <form action="https://formsubmit.co/vicjcc1@gmail.com" method="POST" class="btn btn-dark" type="submit">
+                             <input type="submit" />
                             </ul>
                             </form>
                         </div>

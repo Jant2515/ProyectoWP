@@ -8,7 +8,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <link rel="stylesheet" href="css/nvidia.css" type="text/css"/>
         <link rel="stylesheet" href="css/footer.css" type="text/css"/>
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
+        <link rel="stylesheet" href="css/computadoras.css" type="text/css"/>
+        <link rel="stylesheet" href="css/footer.css" type="text/css"/>
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <title>Nvidia</title>
 
         <meta charset="UTF-8">
@@ -30,7 +32,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                th:text="#{categoria.monitores}">Monitores</a></li>
                         <li><a th:href="@{/tarjetas}" class="nav-links"
                                th:text="#{categoria.tarjetas}">Tarjetas Graficas</a></li>
-                        <li><a href="procesador.html" class="nav-links"
+                        <li><a href="@{/procesadores}" class="nav-links"
                                th:text="#{categoria.procesadores}">Procesadores</a></li>
                     </ul>
                 </li>
@@ -43,39 +45,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
 
     <div class="container">
-        <div class="flex">
-            <img src="images/tarjeta1.jpg" class="Tarjeta" alt="tarjeta1"><br><br>
-            <div style="text-align:center;">ASUS ROG Strix GeForce RTX 2060 Super EVO </div>
-
-            <h4 style="text-align:center;">Precio: $999.999</h4><br>
-            <div>La ASUS ROG STRIX GEFORCE TRX 2060 SUPER EVO cuenta con enfriamiento potente para velocidades de actualizacion mas altas y un super de rendimiento </div>
-
-        </div></div>
-
-    <div class="container">
-        <div class="flex">
-            <img src="images/tarje4.png" class="Tarjeta" alt="tarjeta1">
-            <div style="text-align:center;">Gigabyte Technology GeForce RTX 3070 Vision OC</div>
-
-            <h4 style="text-align:center;">Precio: $999.999</h4><br>
-            <div>La Gigabyte GeForce RTX 3070 Vision OC ofrece aceleración por IA en las mejores aplicaciones creativas. Con el soporte de la plataforma NVIDIA Studio de controladores dedicados y herramientas exclusivas, tanto si estás renderizando escenas en 3D complejas</div>
-        </div></div>
-    <div class="container">
-        <div class="flex">
-            <img src="images/tarje2.png" class="Tarjeta" alt="tarjeta1">
-            <div style="text-align:center;">PNY GeForce RTX 2080 Ti 11 GB GDDR6 </div>
-
-            <h4 style="text-align:center;">Precio: $999.999</h4><br>
-            <div>La PNY GeForce RTX 2080 Ti es una revolución en el realismo y el rendimiento de los juegos. Su potente arquitectura de GPU NVIDIA Turing , tecnologías innovadoras y 11 GB de memoria GDDR6 ultrarrápida </div>
-        </div></div>
-    <div class="container">
-        <div class="flex">
-            <img src="images/tarje3.png" class="Tarjeta" alt="tarjeta1">
-
-            <div style="text-align:center;">PowerColor AMD Radeon RX 550 </div>
-            <h4 style="text-align:center;">Precio: $999.999</h4><br>
-            <div>La PowerColor Red Dragon Radeon RX 550 se basa en la última arquitectura GCN 4 de AMD, diseñada para GloFo 14nm FinFET que ofrece una capacidad de realidad virtual de primer nivel, un mayor nivel de rendimiento, una realidad virtual fluida</div>
-        </div></div>
+        
+        <div class="flex-container" th:each="user: ${nvidiadataset}">
+            <img th:src="${user.getImagenes}" class='lacer' alt="alt"/>
+            <h3 th:text="${user.getNombre}"></h3>
+            <h4 th:text="${user.getPrecio}">$</h4>
+        </div>
+        
+    </div>
     <br>
     <br>
 </body>

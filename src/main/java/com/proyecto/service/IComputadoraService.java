@@ -6,6 +6,7 @@ package com.proyecto.service;
 
 import com.proyecto.entity.Computadora;
 import java.util.List;
+import java.util.Optional;
 
 /**
  *
@@ -13,8 +14,8 @@ import java.util.List;
  */
 public interface IComputadoraService {
     public List<Computadora> getAllComputadora();
+    public Optional<Computadora> get(Long id);
     public Computadora getComputadoraById (long id);
     public void saveComputadora(Computadora computadora);
     public void delete (long id);
-    public Computadora findByNombre (String Nombre);
 }

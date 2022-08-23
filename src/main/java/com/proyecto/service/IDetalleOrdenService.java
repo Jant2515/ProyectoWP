@@ -4,13 +4,13 @@
  */
 package com.proyecto.service;
 
-import com.proyecto.entity.TipoG;
-import java.util.List;
+import com.proyecto.entity.DetalleOrden;
 
 /**
  *
  * @author josea
  */
-public interface ITipoGService {
-    public List<TipoG> listTipoG();
+public interface IDetalleOrdenService {
+
+    DetalleOrden save(DetalleOrden detalleOrden);
 }

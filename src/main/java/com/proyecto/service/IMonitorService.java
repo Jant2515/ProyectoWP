@@ -16,5 +16,4 @@ public interface IMonitorService {
     public Monitor getMonitorById (long id);
     public void saveMonitor(Monitor monitor);
     public void delete (long id);
-    public Monitor findByNombre (String Nombre);
 }

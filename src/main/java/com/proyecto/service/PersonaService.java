@@ -7,6 +7,7 @@ package com.proyecto.service;
 import com.proyecto.entity.Persona;
 import com.proyecto.repository.PersonaRepository;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,19 +16,24 @@ import org.springframework.stereotype.Service;
  * @author josea
  */
 @Service
-public class PersonaService implements IPersonaService{
-    
+public class PersonaService implements IPersonaService {
+
     @Autowired
     private PersonaRepository personaRepository;
-    
+
     @Override
     public List<Persona> getAllPersona() {
-        return (List<Persona>)personaRepository.findAll();
+        return (List<Persona>) personaRepository.findAll();
     }
 
     @Override
     public Persona getPersonaById(long id) {
         return (Persona) personaRepository.findById(id);
+    }
+
+    @Override
+    public Optional<Persona> findById(Long id) {
+        return personaRepository.findById(id);
     }
 
     @Override
@@ -39,10 +45,9 @@ public class PersonaService implements IPersonaService{
     public void delete(long id) {
         personaRepository.deleteById(id);
     }
-    
+
     @Override
-    public Persona findByNombre(String nombre){
+    public Persona findByNombre(String nombre) {
         return personaRepository.findByNombre(nombre);
     }
 }
-

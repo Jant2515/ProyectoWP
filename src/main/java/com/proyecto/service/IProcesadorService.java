@@ -4,8 +4,10 @@
  */
 package com.proyecto.service;
 
+import com.proyecto.entity.Computadora;
 import com.proyecto.entity.Procesador;
 import java.util.List;
+import java.util.Optional;
 
 /**
  *
@@ -13,8 +15,8 @@ import java.util.List;
  */
 public interface IProcesadorService {
     public List<Procesador> getAllProcesador();
+    public Optional<Procesador> get(Long id);
     public Procesador getProcesadorById (long id);
     public void saveProcesador(Procesador procesador);
     public void delete (long id);
-    public Procesador findByNombre (String Nombre);
 }

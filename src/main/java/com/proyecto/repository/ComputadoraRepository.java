@@ -14,5 +14,5 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface ComputadoraRepository extends CrudRepository<Computadora,Long>{
-    Computadora findByNombre (String nombre);
+    
 }

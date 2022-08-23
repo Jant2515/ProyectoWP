@@ -14,5 +14,4 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface MonitorRepository extends CrudRepository<Monitor,Long>{
-    Monitor findByNombre (String nombre);
 }

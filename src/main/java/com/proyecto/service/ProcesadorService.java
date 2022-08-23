@@ -4,9 +4,11 @@
  */
 package com.proyecto.service;
 
+import com.proyecto.entity.Computadora;
 import com.proyecto.entity.Procesador;
 import com.proyecto.repository.ProcesadorRepository;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,6 +26,10 @@ public class ProcesadorService implements IProcesadorService{
     public List<Procesador> getAllProcesador() {
         return (List<Procesador>)procesadorRepository.findAll();
     }
+    @Override
+    public Optional<Procesador> get(Long id) {
+        return procesadorRepository.findById(id);
+    }
 
     @Override
     public Procesador getProcesadorById(long id) {
@@ -38,11 +44,6 @@ public class ProcesadorService implements IProcesadorService{
     @Override
     public void delete(long id) {
         procesadorRepository.deleteById(id);
-    }
-    
-    @Override
-    public Procesador findByNombre(String nombre){
-        return procesadorRepository.findByNombre(nombre);
     }
 }
 

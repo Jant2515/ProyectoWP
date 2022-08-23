@@ -6,6 +6,7 @@ package com.proyecto.service;
 
 import com.proyecto.entity.Persona;
 import java.util.List;
+import java.util.Optional;
 
 /**
  *
@@ -13,6 +14,7 @@ import java.util.List;
  */
 public interface IPersonaService {
     public List<Persona> getAllPersona();
+    Optional<Persona> findById(Long id);
     public Persona getPersonaById (long id);
     public void savePersona(Persona persona);
     public void delete (long id);

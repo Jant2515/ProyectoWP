@@ -7,6 +7,7 @@ package com.proyecto.service;
 import com.proyecto.entity.Computadora;
 import com.proyecto.repository.ComputadoraRepository;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,24 +16,26 @@ import org.springframework.stereotype.Service;
  * @author josea
  */
 @Service
-public class ComputadoraService implements IComputadoraService{
-    
+public class ComputadoraService implements IComputadoraService {
+
     @Autowired
     private ComputadoraRepository computadoraRepository;
-    
-    
+
     @Override
     public List<Computadora> getAllComputadora() {
-        return (List<Computadora>)computadoraRepository.findAll();
+        return (List<Computadora>) computadoraRepository.findAll();
     }
 
-    
+    @Override
+    public Optional<Computadora> get(Long id) {
+        return computadoraRepository.findById(id);
+    }
+
     @Override
     public Computadora getComputadoraById(long id) {
         return computadoraRepository.findById(id).orElse(null);
     }
 
-    
     @Override
     public void saveComputadora(Computadora computadora) {
         computadoraRepository.save(computadora);
@@ -42,12 +45,5 @@ public class ComputadoraService implements IComputadoraService{
     public void delete(long id) {
         computadoraRepository.deleteById(id);
     }
-    
-    
-    @Override
-    public Computadora findByNombre(String nombre){
-        return computadoraRepository.findByNombre(nombre);
-    }
 
 }
-

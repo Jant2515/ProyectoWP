@@ -14,5 +14,4 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface ProcesadorRepository extends CrudRepository<Procesador,Long>{
-    Procesador findByNombre (String nombre);
 }

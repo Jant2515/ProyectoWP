@@ -4,9 +4,8 @@
  */
 package com.proyecto.service;
 
-import com.proyecto.entity.TipoG;
-import com.proyecto.repository.TipoGRepository;
-import java.util.List;
+import com.proyecto.entity.DetalleOrden;
+import com.proyecto.repository.DetalleOrdenRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,13 +14,14 @@ import org.springframework.stereotype.Service;
  * @author josea
  */
 @Service
-public class TipoGService implements ITipoGService {
+public class DetalleOrdenService implements IDetalleOrdenService{
+	
+	@Autowired
+	private DetalleOrdenRepository detalleOrdenRepository;
 
-    @Autowired
-    private TipoGRepository tipoGRepository;
+	@Override
+	public DetalleOrden save(DetalleOrden detalleOrden) {
+		return detalleOrdenRepository.save(detalleOrden);
+	}
 
-    @Override
-    public List<TipoG> listTipoG() {
-        return (List<TipoG>) tipoGRepository.findAll();
-    }
 }

@@ -28,7 +28,8 @@ public class Computadora implements Serializable {
     private String procesador;
     private String ram;
     private String almacenamiento;
-    private String grafica; 
+    private String grafica;
+    private String imagenes; 
 
     public long getId() {
         return id;
@@ -100,6 +101,14 @@ public class Computadora implements Serializable {
 
     public void setGrafica(String grafica) {
         this.grafica = grafica;
+    }
+
+    public String getImagenes() {
+        return imagenes;
+    }
+
+    public void setImagenes(String imagenes) {
+        this.imagenes = imagenes;
     }
     
     

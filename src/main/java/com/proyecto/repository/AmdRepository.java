@@ -4,7 +4,7 @@
  */
 package com.proyecto.repository;
 
-import com.proyecto.entity.TipoG;
+import com.proyecto.entity.Amd;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -13,6 +13,5 @@ import org.springframework.stereotype.Repository;
  * @author josea
  */
 @Repository
-public interface TipoGRepository extends CrudRepository<TipoG,Long>{
-    
+public interface AmdRepository extends CrudRepository<Amd,Long>{
 }

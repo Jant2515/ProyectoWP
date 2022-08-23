@@ -4,17 +4,16 @@
  */
 package com.proyecto.service;
 
-import com.proyecto.entity.Grafica;
+import com.proyecto.entity.Amd;
 import java.util.List;
 
 /**
  *
  * @author josea
  */
-public interface IGraficaService {
-    public List<Grafica> getAllGrafica();
-    public Grafica getGraficaById (long id);
-    public void saveGrafica(Grafica grafica);
+public interface IAmdService {
+    public List<Amd> getAllAmd();
+    public Amd getAmdById (long id);
+    public void saveAmd(Amd amd);
     public void delete (long id);
-    public Grafica findByNombre (String Nombre);
 }

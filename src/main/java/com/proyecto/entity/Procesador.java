@@ -25,7 +25,8 @@ public class Procesador implements Serializable {
     private int precio;
     private int cantidad;
     private String descripcion;
-
+    private String imagenes; 
+    
     public long getId() {
         return id;
     }
@@ -64,6 +65,14 @@ public class Procesador implements Serializable {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    public String getImagenes() {
+        return imagenes;
+    }
+
+    public void setImagenes(String imagenes) {
+        this.imagenes = imagenes;
     }
     
     

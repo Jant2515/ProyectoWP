@@ -4,8 +4,10 @@
  */
 package com.proyecto.repository;
 
-import com.proyecto.entity.Grafica;
-import org.springframework.data.repository.CrudRepository;
+import com.proyecto.entity.Orden;
+import com.proyecto.entity.Persona;
+import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -13,6 +15,6 @@ import org.springframework.stereotype.Repository;
  * @author josea
  */
 @Repository
-public interface GraficaRepository extends CrudRepository<Grafica,Long>{
-    Grafica findByNombre (String nombre);
+public interface OrdenRepository extends JpaRepository<Orden, Integer> {
+	List<Orden> findByPersona (Persona persona);
 }

@@ -5,6 +5,7 @@
 package com.proyecto.repository;
 
 import com.proyecto.entity.Persona;
+import java.util.Optional;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -14,7 +15,9 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface PersonaRepository extends CrudRepository<Persona, Long> {
-
+    
+    Optional<Persona> findByEmail(String email);
+    
     Persona findByNombre(String nombre);
 
     public void deleteById(long id);

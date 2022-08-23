@@ -18,8 +18,8 @@ import javax.persistence.Table;
  * @author josea
  */
 @Entity
-@Table(name="graficas")
-public class Grafica implements Serializable {
+@Table(name="amd")
+public class Amd implements Serializable {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private long id;
@@ -28,10 +28,7 @@ public class Grafica implements Serializable {
     private int cantidad;
     private String descripcion;
     private String memoria;
-    
-    @ManyToOne
-    @JoinColumn (name="tipog_id")
-    private TipoG tipog;
+    private String imagenes;
 
     public long getId() {
         return id;
@@ -81,13 +78,12 @@ public class Grafica implements Serializable {
         this.memoria = memoria;
     }
 
-    public TipoG getTipog() {
-        return tipog;
+    public String getImagenes() {
+        return imagenes;
     }
 
-    public void setTipog(TipoG tipog) {
-        this.tipog = tipog;
+    public void setImagenes(String imagenes) {
+        this.imagenes = imagenes;
     }
-    
     
 }

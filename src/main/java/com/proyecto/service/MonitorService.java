@@ -39,10 +39,5 @@ public class MonitorService implements IMonitorService{
     public void delete(long id) {
         monitorRepository.deleteById(id);
     }
-    
-    @Override
-    public Monitor findByNombre(String nombre){
-        return monitorRepository.findByNombre(nombre);
-    }
 }
 

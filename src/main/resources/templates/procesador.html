@@ -5,6 +5,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 -->
 <html>
     <head>
+        <link rel="stylesheet" href="css/computadoras.css" type="text/css"/>
+        <link rel="stylesheet" href="css/footer.css" type="text/css"/>
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/computadoras.css" type="text/css"/>
+        <link rel="stylesheet" href="css/footer.css" type="text/css"/>
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <link rel="stylesheet" href="css/procesador.css" type="text/css"/>
         <link rel="stylesheet" href="css/procesador.css" type="text/css">
         <link rel="stylesheet" href="css/procesador.css" type="text/css"/>
@@ -20,18 +30,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <img src="images/logo.png" class='logo' alt="Es mi logo"/>
             <nav>
                 <ul class="menu-horizontal">
-                    <li><a href="home.html" class="nav-links">Inicio</a></li>
-                    <li><a href="computadoras.html" class="nav-links">Computadoras</a></li>
+                    <li><a href="@{/home}" class="nav-links">Inicio</a></li>
+                    <li><a href="@{/computadoras}" class="nav-links">Computadoras</a></li>
                     <li>
                         <a href="#" class="nav-links" >Componentes</a>
                         <ul class="menu-vertical">
-                            <li><a href="monitores.html" class="nav-links">Monitores</a></li>
-                            <li><a href="tarjetas.html" class="nav-links">Tarjetas Graficas</a></li>
-                            <li><a href="procesador.html" class="nav-links">Procesadores</a></li>
+                            <li><a href="@{/monitores}" class="nav-links">Monitores</a></li>
+                            <li><a href="@{/tarjetas}" class="nav-links">Tarjetas Graficas</a></li>
+                            <li><a href="@{/procesadores}" class="nav-links">Procesadores</a></li>
                         </ul>
                     </li>
-                    <li><a href="Login.html" class="nav-links">Login</a></li>
-                    <li><a href="ayuda.html" class="nav-links">Ayuda</a></li>
+                    <li><a href="@{/login}" class="nav-links">Login</a></li>
+                    <li><a href="@{/ayuda}" class="nav-links">Ayuda</a></li>
                 </ul>
             </nav>
         </div>
@@ -53,55 +63,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 </ul>
                 <h2>Imagenes de los productos disponibles</h2>
             </div>
+            
             <div class="container">
-                <div class="flex-container">
-                    <img src="images/1.png" class='procesador1' alt="Procesador1">
-                    <h2>AMD Ryzen 5 3600 </h2>
-                    <h4>Precio: $999.999</h4>
+                <div class="flex-container" th:each="user: ${procesadoresdataset}">
+                    <img th:src="@{/images/{img} (img=${user.getImagenes})}" class='lacer' alt="alt"/>
+                    <h3 th:text="${user.getNombre}"></h3>
+                    <h4 th:text="${user.getPrecio}"></h4>
+                    <a th:href="@{/productovista2/{id}  (id=${user.getId})  }" type="button" class="btn btn-outline-dark">Ver producto</a>
                 </div>
-
-                <div class="flex-container">
-                    <img src="images/2.png" class='pros2' alt="pros2">
-                    <h2>AMD Ryzen 7 3700X</h2>
-                    <h4>Precio: $999.999</h4>
-                </div>
-
-                <div class="flex-container">
-                    <img src="images/3.png" class='pros3' alt="pros3">
-                    <h2>Intel Core i7-10700K</h2>
-                    <h4>Precio: $999.999</h4>
-                </div>
-
-                <div class="flex-container">
-                    <img src="images/4.png" class='pros4' alt="pro4">
-                    <h2>Intel Core i5</h2>
-                    <h4>Precio: $999.999</h4>
-                </div>
-
-                <div class="flex-container">
-                    <img src="images/5.png" class='pros5' alt="pros5">
-                    <h2>AMD Ryzen 7 5800X</h2>
-                    <h4>Precio: $999.999</h4>
-                </div>
-
-                <div class="flex-container">
-                    <img src="images/6.png" class='pros6' alt="pros6">
-                    <h2>Intel Core i5-10400</h2>
-                    <h4>Precio: $999.999</h4>
-                </div>
-
-                <div class="flex-container">
-                    <img src="images/7.png" class='pros7' alt="pros7">
-                    <h2>AMD Procesador RYZEN9 3900x</h2>
-                    <h4>Precio: $999.999</h4>
-                </div>
-
-                <div class="flex-container">
-                    <img src="images/8.png" class='pros8' alt="pros8">
-                    <h2>Intel Core i9-9900 </h2>
-                    <h4>Precio: $999.999</h4>
-                </div>
-            </div></div>
+            </div>
+            
+        </div>
         <footer th:replace="plantilla/template::footer" >  </footer>
         <div class="copyrightText">
             <p>Copyright © 2022 STREAMTEG. All Right Reserved.</p>

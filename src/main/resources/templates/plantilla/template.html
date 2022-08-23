@@ -170,6 +170,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <li><a href="ayuda.html">Ayuda</a></li>
                     <li><a href="TerminosyCondiciones.html">Terminos y Condiciones</a></li>
                     <li><a href="url">Contact</a></li>
+                    <a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+                       th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}">ES</a>
+                    <a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+                       th:href="${urlBuilder.replaceQueryParam('lang','en').toUriString()}">EN</a>
                 </ul>
             </div>
             <div class="sec contact">

@@ -17,32 +17,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     </head>
 
     <body>
-        <div class='navbar'>
-            <img src="images/logo.png" class='logo' alt="Es mi logo"/>
-            <nav>
-                <ul class="menu-horizontal">
-                    <li><a th:href="@{/home}" class="nav-links"
-                           th:text="#{categoria.inicio2}">Inicio</a></li>
-                    <li><a th:href="@{/computadoras}" class="nav-links"
-                           th:text="#{categoria.computadoras}">Computadoras</a></li>
-                    <li>
-                        <a href="#" class="nav-links" 
-                           th:text="#{categoria.componentes}">Componentes</a>
-                        <ul class="menu-vertical">
-                            <li><a th:href="@{/monitores}" class="nav-links"
-                                   th:text="#{categoria.monitores}">Monitores</a></li>
-                            <li><a th:href="@{/tarjetas}" class="nav-links"
-                                   th:text="#{categoria.tarjetas}">Tarjetas Graficas</a></li>
-                            <li><a href="@{/procesadores}" class="nav-links"
-                                   th:text="#{categoria.procesadores}">Procesadores</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#" class="nav-links">Login</a></li>
-                    <li><a th:href="@{/ayuda}" class="nav-links"
-                           th:text="#{categoria.ayuda}">Ayuda</a></li>
-                </ul>
-            </nav>
-        </div>
+        <header th:replace="plantilla/template::header"></header>
 
 
         <div class="container">

@@ -4,6 +4,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to c
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
 <html>
+    <header th:frangment="header"></header>
+
     <head>
         <title>Inicio</title>
         <link rel="stylesheet" href="css/footer.css" type="text/css"/>
@@ -11,22 +13,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <link rel="stylesheet" href="css/home.css"/>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <header th:frangment="header"></header>
+     
     </head>
     <body>
-        <div class='navbar'>
-            <nav>
-                <ul class="nav-list">
-                    <li> <a th:href="@{/home}" class="nav-links"
-                            th:text="#{categoria.inicio}">INICIO</a></li>  <!-- SEMANA 9 WEB -->
-                    <li> <a th:href="@{/descuentos}" class="nav-links"
-                            th:text="#{categoria.descuento}">DESCUENTOS</a></li>
-                    <li> <a th:href="@{/categorias}" class="nav-links"
-                            th:text="#{categoria.categorias}">CATEGORIAS</a></li>
-                    <li> <a href="personaN" class="nav-links">SIGN IN</a></li>
-                    <li> <a href="login" class="nav-links">LOG IN</a></li>
-                </ul>
-            </nav>
-        </div>
+         <header th:replace="plantilla/template::header"></header>
+     <br>
         <div class="banner">
             <div class="capa"></div>
             <div class="info">

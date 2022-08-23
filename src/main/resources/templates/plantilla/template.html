@@ -110,16 +110,23 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <nav>  
         <div><img class="imge" src="images/logo.png" alt="logo" ></div>
             <ul> 
-              <li><a class="apo" th:href="@{/home}">Inicio</a></li>
+              <li><a class="apo" th:href="@{/home}"
+                     th:text="#{categoria.inicio2}">Inicio</a></li>
               <li>
-                  <a class="apo" th:href="@{/categorias}">Productos</a>
+                  <a class="apo" th:href="@{/categorias}"
+                     th:text="#{categoria.productos}">Productos</a>
                   <ul>
-                  <li><a class="apo" th:href="@{/descuentos}">Descuentos</a></li>
-                  <li><a class="apo" th:href="@{/computadoras}">Computadoras</a></li>
-                  <li><a class="apo" th:href="@{/procesadores}">Procesadores</a></li>
-                  <li><a class="apo" th:href="@{/monitores}">Monitores</a></li>
+                  <li><a class="apo" th:href="@{/descuentos}"
+                         th:text="#{categoria.descuento}">Descuentos</a></li>
+                  <li><a class="apo" th:href="@{/computadoras}"
+                         th:text="#{categoria.computadoras}">Computadoras</a></li>
+                  <li><a class="apo" th:href="@{/procesadores}"
+                         th:text="#{categoria.procesadores}">Procesadores</a></li>
+                  <li><a class="apo" th:href="@{/monitores}"
+                         th:text="#{categoria.monitores}">Monitores</a></li>
                   <li>
-                      <a class="apo" th:href="@{/tarjetas}">Graficas</a>
+                      <a class="apo" th:href="@{/tarjetas}"
+                         th:text="#{categoria.graficas}">Graficas</a>
                   <ul>
                             <li><a class="apo" th:href="@{/amd}">AMD</a></li>
                             <li><a class="apo" th:href="@{/nvidia}">NVIDIA</a></li>    
@@ -128,7 +135,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </li>
        </ul> 
         <li><a class="apo" href="personaN">Sing in</a> </li>
-        <li><a class="apo" th:href="@{/ubicacion}">Ubicacion</a></li>
+        <li><a class="apo" th:href="@{/ubicacion}"
+               th:text="#{categoria.ubicacion}">Ubicacion</a></li>
         <br>
         <a class="apo" th:href="@{/getCart}"><i class="fa fa-shopping-cart" style="font-size:30px"></i></a>
      </nav> 

@@ -32,18 +32,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
             <div class="content">
                 <!-- br es para hacer salto de linea -->
-                <h1>Procesadores</h1>
-                <h3>Los mejores procesadores de todo el pais</h3>
-                <p>En este apartado podra consultar por la disponibilidad de
+                <h1 th:text="#{titulo.proce}">Procesadores</h1>
+                <h3 th:text="#{info.proce}">Los mejores procesadores de todo el pais</h3>
+                <p th:text="#{info.proce2}">En este apartado podra consultar por la disponibilidad de
                     los mejores procesadores y sus respectivas caracteristicas con
                     los mejores precios de todo el mercado y calidad.<br></p>
-                <h3>En STREAMTEG tenemos en disponibilidad distintos tipos de procesadores:<br></h3>
+                <h3 th:text="#{info.proce3}">En STREAMTEG tenemos en disponibilidad distintos tipos de procesadores:<br></h3>
                 <ul>
                     <li>INTEL</li>
                     <li>AMD</li>
 
                 </ul>
-                <h2>Imagenes de los productos disponibles</h2>
+                <h2 th:text="#{titulo.proce2}">Imagenes de los productos disponibles</h2>
             </div>
             
             <div class="container">
@@ -51,7 +51,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <img th:src="@{/images/{img} (img=${user.getImagenes})}" class='lacer' alt="alt"/>
                     <h3 th:text="${user.getNombre}"></h3>
                     <h4 th:text="${user.getPrecio}"></h4>
-                    <a th:href="@{/productovista2/{id}  (id=${user.getId})  }" type="button" class="btn btn-outline-dark">Ver producto</a>
+                    <a th:href="@{/productovista2/{id}  (id=${user.getId})  }" type="button" class="btn btn-outline-dark"
+                       th:text="#{compu.boton}">Ver producto</a>
                 </div>
             </div>
             

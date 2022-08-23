@@ -32,7 +32,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <img th:src="@{/images/{img} (img=${user.getImagenes})}" class='lacer' alt="alt"/>
                 <h3 th:text="${user.getNombre}"></h3>
                 <h4 th:text="${user.getPrecio}"></h4>
-                <a th:href="@{/productovista4/{id}  (id=${user.getId})  }" type="button" class="btn btn-outline-dark">Ver producto</a>
+                <a th:href="@{/productovista4/{id}  (id=${user.getId})  }" type="button" class="btn btn-outline-dark"
+                   th:text="#{compu.boton}">Ver producto</a>
             </div>
         </div>
 
